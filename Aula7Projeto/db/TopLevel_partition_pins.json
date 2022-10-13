@@ -1,0 +1,205 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "control[0]",
+					"strict" : false
+				},
+				{
+					"name" : "control[1]",
+					"strict" : false
+				},
+				{
+					"name" : "control[2]",
+					"strict" : false
+				},
+				{
+					"name" : "control[3]",
+					"strict" : false
+				},
+				{
+					"name" : "control[4]",
+					"strict" : false
+				},
+				{
+					"name" : "control[5]",
+					"strict" : false
+				},
+				{
+					"name" : "control[6]",
+					"strict" : false
+				},
+				{
+					"name" : "control[7]",
+					"strict" : false
+				},
+				{
+					"name" : "control[8]",
+					"strict" : false
+				},
+				{
+					"name" : "control[9]",
+					"strict" : false
+				},
+				{
+					"name" : "control[10]",
+					"strict" : false
+				},
+				{
+					"name" : "control[11]",
+					"strict" : false
+				},
+				{
+					"name" : "LedR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LedR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LedR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LedR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LedR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LedR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LedR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LedR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LedR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LedR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "regA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "regA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "regA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "regA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "regA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "regA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "regA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_simu[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_simu[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_simu[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_simu[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_simu[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_simu[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_simu[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_simu[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_simu[8]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

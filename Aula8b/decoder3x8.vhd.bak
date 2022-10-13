@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decoder3x8 is
+  port ( entrada : in std_logic_vector(2 downto 0);
+         saida : out std_logic_vector(7 downto 0)
+  );
+  
+  
+  saida(0) <= '1' when entrada = "000";
+  saida(1) <= '1' when entrada = "001";
+  saida(2) <= '1' when entrada = "010";
+  saida(3) <= '1' when entrada = "011";
+  saida(4) <= '1' when entrada = "100";
+  saida(5) <= '1' when entrada = "101";
+  saida(6) <= '1' when entrada = "110";
+  saida(7) <= '1' when entrada = "111"; 
+  
+  
+end entity;
