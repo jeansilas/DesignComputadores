@@ -1,0 +1,30 @@
+Quartus Prime Archive log --	C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/Ent1Aula3.qarlog
+
+Archive:	C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/Ent1Aula3.qar
+Date:		Mon Sep 05 19:57:32 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/Ent1Aula3.qpf
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/Ent1Aula3.qsf
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/Ent1Aula3.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/ULASomaSub.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/Waveform1.vwf
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/decoderInstru.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/edgeDetector.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/memoriaRAM.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/memoriaROM.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/muxGenerico2x1.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/registradorGenerico.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/somaConstante.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Sep 05 19:57:48 2022
+Source archive file:	C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/Ent1Aula3.qar
+Archive was extracted into	C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula4V/Ent1Aula3_restored/
+		 - successfully.

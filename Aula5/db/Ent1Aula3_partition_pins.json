@@ -1,0 +1,217 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PC_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_view[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_view[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_view[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_view[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_view[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_view[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_view[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_view[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_view[8]",
+					"strict" : false
+				},
+				{
+					"name" : "flag_zero_out",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "flag_zero_in",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_A_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_A_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_A_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_A_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_A_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_A_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_A_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_A_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_B_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_B_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_B_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_B_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_B_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_B_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_B_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_B_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

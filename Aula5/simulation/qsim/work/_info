@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/jeans/Desktop/Insper/6Semestre/DesComp/EntAula3/simulation/qsim
+Eent1aula3
+Z0 w1663274807
+Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z2 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 64
+Z10 dC:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula5/simulation/qsim
+Z11 8Ent1Aula3.vho
+Z12 FEnt1Aula3.vho
+l0
+L39 1
+V4TO>aS7ILWhTSnJMg0hFO2
+!s100 Xi0iJj_9>:k0h^B`>E8;m0
+Z13 OV;C;2020.1;71
+32
+Z14 !s110 1663274809
+!i10b 1
+Z15 !s108 1663274809.000000
+Z16 !s90 -work|work|Ent1Aula3.vho|
+Z17 !s107 Ent1Aula3.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 9 ent1aula3 0 22 4TO>aS7ILWhTSnJMg0hFO2
+!i122 64
+l400
+L54 4149
+VFD:j00LlSAEAdT3Y3j9Fe3
+!s100 CY=6XT?DAc1Q:eP:@<Ama0
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Eent1aula3_vhd_vec_tst
+Z20 w1663274805
+R7
+R8
+!i122 65
+R10
+Z21 8Waveform1.vwf.vht
+Z22 FWaveform1.vwf.vht
+l0
+L32 1
+V@hX=a[cAfgg74Qe1J:oPn3
+!s100 d_M^:0NnD6f@1KiWJF8DL0
+R13
+32
+Z23 !s110 1663274810
+!i10b 1
+R15
+Z24 !s90 -work|work|Waveform1.vwf.vht|
+Z25 !s107 Waveform1.vwf.vht|
+!i113 1
+R18
+R19
+Aent1aula3_arch
+R7
+R8
+Z26 DEx4 work 21 ent1aula3_vhd_vec_tst 0 22 @hX=a[cAfgg74Qe1J:oPn3
+!i122 65
+l61
+Z27 L34 59
+Z28 Vd8NeFGZ:gc:`_hUJT]eES2
+Z29 !s100 iaVM0f?FQFJE??fahQIU70
+R13
+32
+R23
+!i10b 1
+R15
+R24
+R25
+!i113 1
+R18
+R19

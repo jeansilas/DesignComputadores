@@ -1,0 +1,14 @@
+|memoria
+Endereco[0] => memROM.RADDR
+Endereco[1] => memROM.RADDR1
+Endereco[2] => memROM.RADDR2
+Dado[0] <= memROM.DATAOUT
+Dado[1] <= memROM.DATAOUT1
+Dado[2] <= memROM.DATAOUT2
+Dado[3] <= memROM.DATAOUT3
+Dado[4] <= memROM.DATAOUT4
+Dado[5] <= memROM.DATAOUT5
+Dado[6] <= memROM.DATAOUT6
+Dado[7] <= memROM.DATAOUT7
+
+
