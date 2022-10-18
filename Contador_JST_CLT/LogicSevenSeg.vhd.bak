@@ -1,0 +1,141 @@
+ibrary ieee;
+use ieee.std_logic_1164.all;
+
+entity LogicSevenSeg is 
+  port ( 
+			CLK: in std_logic;
+			WR: in std_logic;
+			Data_out: in std_logic_vector(7 downto 0);
+			Data_address: in std_logic_vector(8 downto 0);
+			
+			
+  );
+  end entity;
+  
+  architecture logic of LogicLed is
+  
+  signal decoderBloco:  std_logic_vector(7 downto 0);
+  signal decoderEndereco:  std_logic_vector(7 downto 0);
+  
+  signal Hex0: std_logic_vector(3 downto 0);
+  signal Hex1: std_logic_vector(3 downto 0);
+  signal Hex2: std_logic_vector(3 downto 0);
+  signal Hex3: std_logic_vector(3 downto 0);
+  signal Hex4: std_logic_vector(3 downto 0);
+  signal Hex5: std_logic_vector(3 downto 0);
+  signal Hex6: std_logic_vector(3 downto 0);
+  signal Hex7: std_logic_vector(3 downto 0);
+  
+  
+  
+  begin
+  
+  
+  DecoderBloco_item: entity work.decoder3x8
+
+						port map (   entrada => Data_address(8 downto 6),
+										 saida => decoderBloco 
+  );
+  
+  DecoderEndereco_item: entity work.decoder3x8
+
+						port map ( 	 entrada => Data_address(2 downto 0),
+										 saida => decoderEndereco
+	);
+  
+  
+  HEX0_item: work.registradorGenerico generic map (larguraDados => 4)
+  
+		port map (
+						DIN => Data_out(3 downto 0),
+						DOUT => Hex0,
+						ENABLE => (WR and decoderBloco(4) and decoderEndereco(0) and Data_address(5)),
+						CLK => CLK,
+						RST => '0'
+				
+				
+				);
+	HEX1_item: work.registradorGenerico generic map (larguraDados => 4)
+  
+		port map (
+						DIN => Data_out(3 downto 0),
+						DOUT => Hex1,
+						ENABLE => (WR and decoderBloco(4) and decoderEndereco(1) and Data_address(5)),
+						CLK => CLK,
+						RST => '0'
+				
+				
+				);
+	HEX2_item: work.registradorGenerico generic map (larguraDados => 4)
+  
+		port map (
+						DIN => Data_out(3 downto 0),
+						DOUT => Hex2,
+						ENABLE => (WR and decoderBloco(4) and decoderEndereco(2) and Data_address(5)),
+						CLK => CLK,
+						RST => '0'
+				
+				
+				);
+	HEX3_item: work.registradorGenerico generic map (larguraDados => 4)
+  
+		port map (
+						DIN => Data_out(3 downto 0),
+						DOUT => Hex3,
+						ENABLE => (WR and decoderBloco(4) and decoderEndereco(3) and Data_address(5)),
+						CLK => CLK,
+						RST => '0'
+				
+				
+				);
+	HEX4_item: work.registradorGenerico generic map (larguraDados => 4)
+  
+		port map (
+						DIN => Data_out(3 downto 0),
+						DOUT => Hex4,
+						ENABLE => (WR and decoderBloco(4) and decoderEndereco(4) and Data_address(5)),
+						CLK => CLK,
+						RST => '0'
+				
+				
+				);
+	HEX5_item: work.registradorGenerico generic map (larguraDados => 4)
+  
+		port map (
+						DIN => Data_out(3 downto 0),
+						DOUT => Hex5,
+						ENABLE => (WR and decoderBloco(4) and decoderEndereco(5) and Data_address(5)),
+						CLK => CLK,
+						RST => '0'
+				
+				
+				);
+	HEX6_item: work.registradorGenerico generic map (larguraDados => 4)
+  
+		port map (
+						DIN => Data_out(3 downto 0),
+						DOUT => Hex6,
+						ENABLE => (WR and decoderBloco(4) and decoderEndereco(6) and Data_address(5)),
+						CLK => CLK,
+						RST => '0'
+				
+				
+				);
+	HEX7_item: work.registradorGenerico generic map (larguraDados => 4)
+  
+		port map (
+						DIN => Data_out(3 downto 0),
+						DOUT => Hex7,
+						ENABLE => (WR and decoderBloco(4) and decoderEndereco(7) and Data_address(5)),
+						CLK => CLK,
+						RST => '0'
+				
+				
+				);
+	
+	
+  
+ 
+  
+  
+end architecture;

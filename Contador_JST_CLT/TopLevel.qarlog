@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/TopLevel.qarlog
+
+Archive:	C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/TopLevel.qar
+Date:		Tue Oct 11 12:21:55 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/LogicKeySwitch.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/LogicLed.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/LogicSevenSeg.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/Processador.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/TopLevel.qpf
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/TopLevel.qsf
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/TopLevel.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/ULASomaSub.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/buffer_3_state_8portas.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/conversorHex7Seg.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/decoder3x8.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/decoderInstru.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/edgeDetector.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/flipflop.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/logicaDesvio.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/memoriaRAM.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/memoriaROM.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/muxGenerico2x1.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/muxGenerico4x1.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/registradorGenerico.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/somaConstante.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
