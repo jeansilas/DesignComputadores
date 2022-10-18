@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity decoderInstru is
   port ( opcode : in std_logic_vector(3 downto 0);
-         saida : out std_logic_vector(13 downto 0)
+         saida : out std_logic_vector(12 downto 0)
   );
 end entity;
 
@@ -25,20 +25,20 @@ architecture comportamento of decoderInstru is
   constant JST  : std_logic_vector(3 downto 0)   := "1101";
 
   begin
-saida <= "00000000000000" when opcode = NOP  	else
-         "00000000110010" when opcode = LDA  	else
-         "00000000101010" when opcode = SOMA 	else
-         "00000000100010" when opcode = SUB  	else
-			"00000000111010" when opcode = ANDOP 	else
-         "00000001110000" when opcode = LDI  	else
-			"00000000000001" when opcode = STA  	else
-			"00010000000000" when opcode = JMP  	else
-			"00000010000000" when opcode = JEQ  	else
-			"00000000000110" when opcode = CEQ  	else
-			"00100100000000" when opcode = JSR  	else
-		   "00001000000000" when opcode = RET  	else
-			"01000000000010" when opcode = CLT  	else -- ultimo bit é de habilita less
-			"01000000000000" when opcode = JST else
-         "00000000000000";  -- NOP para os opcodes Indefinidos
+saida <= "0000000000000" when opcode = NOP  	else
+         "0000000110010" when opcode = LDA  	else
+         "0000000101010" when opcode = SOMA 	else
+         "0000000100010" when opcode = SUB  	else
+			"0000000111010" when opcode = ANDOP 	else
+         "0000001110000" when opcode = LDI  	else
+			"0000000000001" when opcode = STA  	else
+			"0010000000000" when opcode = JMP  	else
+			"0000010000000" when opcode = JEQ  	else
+			"0000000000110" when opcode = CEQ  	else
+			"0100100000000" when opcode = JSR  	else
+		   "0001000000000" when opcode = RET  	else
+			"1000000000010" when opcode = CLT  	else -- ultimo bit é de habilita less
+			"1000000000000" when opcode = JST   else
+         "0000000000000";  -- NOP para os opcodes Indefinidos
 
 end architecture;

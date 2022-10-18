@@ -38,15 +38,17 @@ architecture arquitetura of Processador is
   signal REGA_saida : std_logic_vector (larguraDados-1 downto 0);
   signal ULA_saida : std_logic_vector (larguraDados-1 downto 0);
   signal MEM_saida : std_logic_vector (larguraDados-1 downto 0);
-  signal DECODER_saida: std_logic_vector (13 downto 0);
+  signal DECODER_saida: std_logic_vector (12 downto 0);
   signal flag_zero_saida: std_logic;
   signal flag_zero_entrada: std_logic;
+  signal flag_less_saida	: std_logic;
+  signal flag_less_entrada	: std_logic;
   signal MUX_JMP_Sel: std_logic_vector(1 downto 0);
   signal end_ret: std_logic_vector( 8 downto 0);
   
   
   alias opcode: std_logic_vector(3 downto 0) is instruction(12 downto 9); 
-  alias controle: std_logic_vector(11 downto 0) is DECODER_saida;
+  alias controle: std_logic_vector(12 downto 0) is DECODER_saida;
   alias MUX1: std_logic_vector(7 downto 0) is instruction(7 downto 0);
   alias MUX0: std_logic_vector(7 downto 0) is MEM_saida(larguraDados-1 downto 0);
   alias ULA_A: std_logic_vector(7 downto 0) is REGA_saida(larguraDados-1 downto 0);
@@ -64,9 +66,10 @@ architecture arquitetura of Processador is
   
   alias habilita_flag_zero: std_logic is controle(2);
   alias habilita_flag_ret: std_logic is controle(11);
+  alias habilita_flag_less	: std_logic is controle(12);
   alias JMP_controle: std_logic is controle(10);
   alias JEQ_controle: std_logic is controle(7);
-  alias JST_controle: std_logic is controle(13);
+  alias JST_controle: std_logic is controle(12);
   
   
 
@@ -91,6 +94,7 @@ LogicaDesvio_item: entity work.logicaDesvio
 
 						port map (   controle => controle,
 										 flag_zero => flag_zero_saida,
+										 flag_less 	=> flag_less_saida,
 										 saida => MUX_JMP_Sel 
   );
 
@@ -144,7 +148,15 @@ FLAG_zero_item : entity work.flipflop
 						  DOUT => flag_zero_saida,
 						  ENABLE => Habilita_flag_zero, 
 						  CLK => CLK, 
-						  RST => '0');		
+						  RST => '0');	
+						 
+-- Port map da Flag de Less (menor)
+FLAG_less_item : entity work.flipflop 
+          port map (DIN => flag_less_entrada, 
+						  DOUT => flag_less_saida,
+						  ENABLE => habilita_flag_less, 
+						  CLK => CLK, 
+						  RST => '0');	 
 
 END_RET_item: entity work.registradorGenerico generic map (larguraDados => 9)
 				port map (DIN => proxPC, 
