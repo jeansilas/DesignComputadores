@@ -7,6 +7,11 @@ class Assembler:
        
        self.filename = sys.argv[1]
        self.opcodeFile = sys.argv[2]
+       try:
+           self.bin = sys.argv[3]
+       except:
+           self.bin = "" 
+       self.Isbin = self.bin == ("--binary")
        self.filename_asm = f"{self.filename.split('.')[0]}.asm"
        self.stringComment = "#"
        self.stringLabel = ":"
@@ -18,6 +23,7 @@ class Assembler:
        self.LineKey = "Line"
        self.initialization = f"\n\n\n\n\n[Program has started]\n\nInitializing the conversion of '{self.filename}' using the '{self.opcodeFile}' . \n\n"
        print(self.initialization)
+       print(self.bin)
 
        self.assemble()
 
@@ -66,8 +72,13 @@ class Assembler:
                 content = self.sep_content(line,self.stringComment)
 
                 if  (self.stopOpcodes[0] in content):
-                    opcode = self.opcodes[self.sep_content(content,self.stopOpcodes[0],0)]
-                    number = self.sep_content(content,self.stopOpcodes[0],1)
+                    if self.Isbin:
+
+                        opcode = self.opcodes[self.sep_content(content,self.stopOpcodes[0],0)]
+                        number = self.sep_content(content,self.stopOpcodes[0],1)
+                    else:
+                        opcode = self.sep_content(content,self.stopOpcodes[0],0)
+                        number = self.sep_content(content,self.stopOpcodes[0],1)
 
                     try:
                         number = self.labels[number.upper()]
@@ -78,9 +89,13 @@ class Assembler:
                     id_line += 1
 
                 elif  (self.stopOpcodes[1] in content):
-                    opcode = self.opcodes[self.sep_content(content,self.stopOpcodes[1],0)]
-                    number = self.sep_content(content,self.stopOpcodes[1],1)
+                    if self.Isbin:
 
+                        opcode = self.opcodes[self.sep_content(content,self.stopOpcodes[1],0)]
+                        number = self.sep_content(content,self.stopOpcodes[1],1)
+                    else:
+                        opcode = self.sep_content(content,self.stopOpcodes[1],0)
+                        number = self.sep_content(content,self.stopOpcodes[1],1)
                     try:
                         number = self.labels[number.upper()]
                     except:
@@ -90,23 +105,32 @@ class Assembler:
                     id_line += 1
                 
                 elif (content == "RET") or  (content == "NOP"):
-                     self.lines[id_line] = [self.opcodes[content] ,"0"]
-                     id_line += 1
+                    if self.Isbin:
+                        self.lines[id_line] = [self.opcodes[content] ,"0"]
+                    else:
+                        self.lines[id_line] = [content ,"0"]
+                    id_line += 1
     
     def Bynarization(self):
         BinaryFormat = lambda x, n: format(x, 'b').zfill(n)
-        self.lines = {key: [BinaryFormat(int(value[0]),4),BinaryFormat(int(value[1]),9)] for key, value in self.lines.items()}
-
+        if self.Isbin:
+            self.lines = {key: [BinaryFormat(int(value[0]),4),BinaryFormat(int(value[1]),9)] for key, value in self.lines.items()}
+        else:
+            self.lines = {key: [value[0],BinaryFormat(int(value[1]),9)] for key, value in self.lines.items()}
     def convert(self):
         id_line = 0
         writing = True
         with open(self.filename_asm,"w", encoding="utf-8") as archive:
             while writing:
                 try:
-                   archive.write(f"{self.lines[id_line][0]}{self.lines[id_line][1]}\n")
-                   id_line += 1
+                    if self.Isbin:
+                        archive.write(f"tmp({id_line})  := \"{self.lines[id_line][0]}{self.lines[id_line][1]}\";\n")
+                    else:
+                        archive.write(f"tmp({id_line})  := {self.lines[id_line][0]} & \"{self.lines[id_line][1]}\";\n")
+                    id_line += 1
                 except:
                     writing = False
+            archive.write("return tmp;")
 
     def assemble(self):
         self.loadOpcode()

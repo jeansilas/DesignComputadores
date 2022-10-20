@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TopLevel
-Tue Oct 18 19:48:32 2022
+Wed Oct 19 22:56:23 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -69,13 +69,12 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  61. Port Connectivity Checks: "Processador:CPU|registradorGenerico:END_RET_item"
  62. Port Connectivity Checks: "Processador:CPU|flipflop:FLAG_less_item"
  63. Port Connectivity Checks: "Processador:CPU|flipflop:FLAG_zero_item"
- 64. Port Connectivity Checks: "Processador:CPU|ULASomaSub:ULA_item"
- 65. Port Connectivity Checks: "Processador:CPU|registradorGenerico:PC_item"
- 66. Port Connectivity Checks: "Processador:CPU|registradorGenerico:REGA_item"
- 67. Port Connectivity Checks: "Processador:CPU|muxGenerico4x1:MUX_JMP"
- 68. Post-Synthesis Netlist Statistics for Top Partition
- 69. Elapsed Time Per Partition
- 70. Analysis & Synthesis Messages
+ 64. Port Connectivity Checks: "Processador:CPU|registradorGenerico:PC_item"
+ 65. Port Connectivity Checks: "Processador:CPU|registradorGenerico:REGA_item"
+ 66. Port Connectivity Checks: "Processador:CPU|muxGenerico4x1:MUX_JMP"
+ 67. Post-Synthesis Netlist Statistics for Top Partition
+ 68. Elapsed Time Per Partition
+ 69. Analysis & Synthesis Messages
 
 
 
@@ -102,13 +101,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 18 19:48:32 2022       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 19 22:56:23 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; TopLevel                                    ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 67                                          ;
+; Total registers                 ; 68                                          ;
 ; Total pins                      ; 107                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -223,35 +222,36 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                               ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
-; LogicLed.vhd                     ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicLed.vhd               ;         ;
-; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd             ;         ;
-; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/somaConstante.vhd          ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/registradorGenerico.vhd    ;         ;
-; Processador.vhd                  ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd            ;         ;
-; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico4x1.vhd         ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd         ;         ;
-; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/memoriaROM.vhd             ;         ;
-; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/memoriaRAM.vhd             ;         ;
-; logicaDesvio.vhd                 ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/logicaDesvio.vhd           ;         ;
-; flipflop.vhd                     ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/flipflop.vhd               ;         ;
-; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/edgeDetector.vhd           ;         ;
-; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/decoderInstru.vhd          ;         ;
-; TopLevel.vhd                     ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd               ;         ;
-; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/decoder3x8.vhd             ;         ;
-; LogicSevenSeg.vhd                ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicSevenSeg.vhd          ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/conversorHex7Seg.vhd       ;         ;
-; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/buffer_3_state_8portas.vhd ;         ;
-; LogicKeySwitch.vhd               ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicKeySwitch.vhd         ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; LogicLed.vhd                     ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicLed.vhd               ;         ;
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/ULASomaSub.vhd             ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/somaConstante.vhd          ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/registradorGenerico.vhd    ;         ;
+; Processador.vhd                  ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd            ;         ;
+; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico4x1.vhd         ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd         ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/memoriaROM.vhd             ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/memoriaRAM.vhd             ;         ;
+; logicaDesvio.vhd                 ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/logicaDesvio.vhd           ;         ;
+; flipflop.vhd                     ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/flipflop.vhd               ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/edgeDetector.vhd           ;         ;
+; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/decoderInstru.vhd          ;         ;
+; TopLevel.vhd                     ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd               ;         ;
+; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/decoder3x8.vhd             ;         ;
+; LogicSevenSeg.vhd                ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicSevenSeg.vhd          ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/conversorHex7Seg.vhd       ;         ;
+; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/buffer_3_state_8portas.vhd ;         ;
+; LogicKeySwitch.vhd               ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicKeySwitch.vhd         ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------+
@@ -259,25 +259,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------+
 ; Resource                                    ; Usage                                   ;
 +---------------------------------------------+-----------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 81                                      ;
+; Estimate of Logic utilization (ALMs needed) ; 89                                      ;
 ;                                             ;                                         ;
-; Combinational ALUT usage for logic          ; 131                                     ;
+; Combinational ALUT usage for logic          ; 142                                     ;
 ;     -- 7 input functions                    ; 0                                       ;
-;     -- 6 input functions                    ; 21                                      ;
-;     -- 5 input functions                    ; 18                                      ;
-;     -- 4 input functions                    ; 66                                      ;
-;     -- <=3 input functions                  ; 26                                      ;
+;     -- 6 input functions                    ; 28                                      ;
+;     -- 5 input functions                    ; 20                                      ;
+;     -- 4 input functions                    ; 69                                      ;
+;     -- <=3 input functions                  ; 25                                      ;
 ;                                             ;                                         ;
-; Dedicated logic registers                   ; 67                                      ;
+; Dedicated logic registers                   ; 68                                      ;
 ;                                             ;                                         ;
 ; I/O pins                                    ; 107                                     ;
 ;                                             ;                                         ;
 ; Total DSP Blocks                            ; 0                                       ;
 ;                                             ;                                         ;
 ; Maximum fan-out node                        ; edgeDetector:\gravar:detectorSub0|saida ;
-; Maximum fan-out                             ; 66                                      ;
-; Total fan-out                               ; 922                                     ;
-; Average fan-out                             ; 2.24                                    ;
+; Maximum fan-out                             ; 67                                      ;
+; Total fan-out                               ; 971                                     ;
+; Average fan-out                             ; 2.29                                    ;
 +---------------------------------------------+-----------------------------------------+
 
 
@@ -286,7 +286,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name         ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+---------------------+--------------+
-; |TopLevel                                   ; 131 (3)             ; 67 (0)                    ; 0                 ; 0          ; 107  ; 0            ; |TopLevel                                                                      ; TopLevel            ; work         ;
+; |TopLevel                                   ; 142 (6)             ; 68 (0)                    ; 0                 ; 0          ; 107  ; 0            ; |TopLevel                                                                      ; TopLevel            ; work         ;
 ;    |LogicSevenSeg:LogicSevenSeg_item|       ; 32 (4)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item                                     ; LogicSevenSeg       ; work         ;
 ;       |conversorHex7Seg:HEX0Conversor_item| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|conversorHex7Seg:HEX0Conversor_item ; conversorHex7Seg    ; work         ;
 ;       |conversorHex7Seg:HEX1Conversor_item| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|conversorHex7Seg:HEX1Conversor_item ; conversorHex7Seg    ; work         ;
@@ -296,18 +296,19 @@ https://fpgasoftware.intel.com/eula.
 ;       |registradorGenerico:HEX1_item|       ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX1_item       ; registradorGenerico ; work         ;
 ;       |registradorGenerico:HEX2_item|       ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX2_item       ; registradorGenerico ; work         ;
 ;       |registradorGenerico:HEX3_item|       ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX3_item       ; registradorGenerico ; work         ;
-;    |Processador:CPU|                        ; 52 (0)              ; 18 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU                                                      ; Processador         ; work         ;
-;       |ULASomaSub:ULA_item|                 ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|ULASomaSub:ULA_item                                  ; ULASomaSub          ; work         ;
-;       |decoderInstru:DECODER_item|          ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|decoderInstru:DECODER_item                           ; decoderInstru       ; work         ;
-;       |flipflop:FLAG_zero_item|             ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|flipflop:FLAG_zero_item                              ; flipflop            ; work         ;
-;       |muxGenerico2x1:MUX_item|             ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|muxGenerico2x1:MUX_item                              ; muxGenerico2x1      ; work         ;
+;    |Processador:CPU|                        ; 64 (0)              ; 19 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU                                                      ; Processador         ; work         ;
+;       |ULASomaSub:ULA_item|                 ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|ULASomaSub:ULA_item                                  ; ULASomaSub          ; work         ;
+;       |decoderInstru:DECODER_item|          ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|decoderInstru:DECODER_item                           ; decoderInstru       ; work         ;
+;       |flipflop:FLAG_less_item|             ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|flipflop:FLAG_less_item                              ; flipflop            ; work         ;
+;       |flipflop:FLAG_zero_item|             ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|flipflop:FLAG_zero_item                              ; flipflop            ; work         ;
+;       |muxGenerico2x1:MUX_item|             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|muxGenerico2x1:MUX_item                              ; muxGenerico2x1      ; work         ;
 ;       |muxGenerico4x1:MUX_JMP|              ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|muxGenerico4x1:MUX_JMP                               ; muxGenerico4x1      ; work         ;
 ;       |registradorGenerico:PC_item|         ; 1 (1)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|registradorGenerico:PC_item                          ; registradorGenerico ; work         ;
 ;       |registradorGenerico:REGA_item|       ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|registradorGenerico:REGA_item                        ; registradorGenerico ; work         ;
 ;       |somaConstante:incrementaPC_item|     ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|somaConstante:incrementaPC_item                      ; somaConstante       ; work         ;
 ;    |edgeDetector:\gravar:detectorSub0|      ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|edgeDetector:\gravar:detectorSub0                                    ; edgeDetector        ; work         ;
-;    |memoriaRAM:RAM|                         ; 29 (29)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|memoriaRAM:RAM                                                       ; memoriaRAM          ; work         ;
-;    |memoriaROM:ROM|                         ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|memoriaROM:ROM                                                       ; memoriaROM          ; work         ;
+;    |memoriaRAM:RAM|                         ; 28 (28)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|memoriaRAM:RAM                                                       ; memoriaRAM          ; work         ;
+;    |memoriaROM:ROM|                         ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|memoriaROM:ROM                                                       ; memoriaROM          ; work         ;
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -319,6 +320,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+---------------------------------------------+
 ; LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX4_item|DOUT[0..3] ; Stuck at GND due to stuck port clock_enable ;
 ; LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX5_item|DOUT[0..3] ; Stuck at GND due to stuck port clock_enable ;
+; LogicKeySwitch:LogicKeySwitch_item|flipflop:Debouncer_Key1_item|DOUT      ; Stuck at VCC due to stuck port data_in      ;
+; LogicKeySwitch:LogicKeySwitch_item|edgeDetector:EdgeDetector1_item|saidaQ ; Lost fanout                                 ;
 ; LogicKeySwitch:LogicKeySwitch_item|flipflop:Debouncer_Key0_item|DOUT      ; Stuck at VCC due to stuck port data_in      ;
 ; LogicKeySwitch:LogicKeySwitch_item|edgeDetector:EdgeDetector0_item|saidaQ ; Lost fanout                                 ;
 ; LogicLed:LogicLed_item|registradorGenerico:LEDR_item|DOUT[0..7]           ; Stuck at GND due to stuck port clock_enable ;
@@ -1220,104 +1223,104 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; memoriaRAM:RAM|ram~1037                                                   ; Lost fanout                                 ;
 ; memoriaRAM:RAM|ram~1038                                                   ; Lost fanout                                 ;
 ; memoriaRAM:RAM|ram~1039                                                   ; Lost fanout                                 ;
-; memoriaRAM:RAM|ram~528                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~544                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~536                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~552                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~272                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~288                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~528                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~784                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~800                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~280                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~296                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~536                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~792                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~288                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~544                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~800                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~296                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~552                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~808                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~273                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~281                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~289                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~297                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~529                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~537                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~545                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~553                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~273                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~281                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~785                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~793                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~289                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~297                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~801                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~809                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~274                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~282                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~290                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~298                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~530                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~538                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~546                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~554                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~786                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~282                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~538                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~794                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~290                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~546                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~802                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~298                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~554                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~810                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~275                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~531                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~787                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~283                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~539                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~795                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~291                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~547                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~803                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~299                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~531                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~539                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~547                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~555                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~787                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~795                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~803                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~811                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~276                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~284                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~292                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~300                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~532                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~540                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~548                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~556                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~788                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~284                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~540                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~796                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~292                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~548                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~804                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~300                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~556                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~812                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~277                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~533                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~789                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~285                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~541                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~797                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~293                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~549                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~805                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~301                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~533                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~541                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~549                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~557                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~789                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~797                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~805                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~813                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~278                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~286                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~294                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~302                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~534                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~542                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~550                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~558                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~278                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~286                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~790                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~798                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~294                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~302                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~806                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~814                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~279                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~535                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~791                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~287                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~543                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~799                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~295                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~551                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~807                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~303                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~543                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~559                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~279                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~295                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~791                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~807                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~287                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~303                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~799                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~815                                                    ; Stuck at GND due to stuck port clock_enable ;
 ; Processador:CPU|registradorGenerico:END_RET_item|DOUT[0..8]               ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 1021                                  ;                                             ;
+; Total Number of Removed Registers = 1023                                  ;                                             ;
 +---------------------------------------------------------------------------+---------------------------------------------+
 
 
@@ -1326,6 +1329,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
 ; Register name                                                        ; Reason for Removal        ; Registers Removed due to This Register                                    ;
 +----------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
+; LogicKeySwitch:LogicKeySwitch_item|flipflop:Debouncer_Key1_item|DOUT ; Stuck at VCC              ; LogicKeySwitch:LogicKeySwitch_item|edgeDetector:EdgeDetector1_item|saidaQ ;
+;                                                                      ; due to stuck port data_in ;                                                                           ;
 ; LogicKeySwitch:LogicKeySwitch_item|flipflop:Debouncer_Key0_item|DOUT ; Stuck at VCC              ; LogicKeySwitch:LogicKeySwitch_item|edgeDetector:EdgeDetector0_item|saidaQ ;
 ;                                                                      ; due to stuck port data_in ;                                                                           ;
 +----------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
@@ -1336,9 +1341,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 67    ;
+; Total registers                              ; 68    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 56    ;
@@ -1351,9 +1356,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|Processador:CPU|registradorGenerico:PC_item|DOUT[7] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|Processador:CPU|registradorGenerico:PC_item|DOUT[6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |TopLevel|Processador:CPU|ULASomaSub:ULA_item|saida[0]        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|Processador:CPU|registradorGenerico:PC_item|DOUT[2] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|Processador:CPU|registradorGenerico:PC_item|DOUT[1] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |TopLevel|Processador:CPU|ULASomaSub:ULA_item|saida[1]        ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TopLevel|Processador:CPU|decoderInstru:DECODER_item|saida[4] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 
@@ -1591,15 +1596,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+-------+----------+--------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "LogicKeySwitch:LogicKeySwitch_item|flipflop:Debouncer_Key1_item"                      ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; din    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; dout   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LogicKeySwitch:LogicKeySwitch_item|flipflop:Debouncer_Key1_item" ;
++--------+-------+----------+-----------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                         ;
++--------+-------+----------+-----------------------------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                                    ;
+; enable ; Input ; Info     ; Stuck at VCC                                                    ;
++--------+-------+----------+-----------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -1869,15 +1873,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Processador:CPU|ULASomaSub:ULA_item"                                                     ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; flag_less ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Processador:CPU|registradorGenerico:PC_item" ;
 +--------+-------+----------+---------------------------------------------+
@@ -1911,27 +1906,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 67                          ;
-;     ENA               ; 48                          ;
-;     ENA SLD           ; 8                           ;
-;     plain             ; 11                          ;
-; arriav_lcell_comb     ; 135                         ;
-;     arith             ; 18                          ;
+; arriav_ff             ; 68                          ;
+;     ENA               ; 56                          ;
+;     plain             ; 12                          ;
+; arriav_lcell_comb     ; 146                         ;
+;     arith             ; 26                          ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 8                           ;
-;     normal            ; 117                         ;
+;         4 data inputs ; 3                           ;
+;         5 data inputs ; 13                          ;
+;     normal            ; 120                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 65                          ;
-;         5 data inputs ; 10                          ;
-;         6 data inputs ; 21                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 66                          ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 28                          ;
 ; boundary_port         ; 107                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.70                        ;
-; Average LUT depth     ; 3.34                        ;
+; Max LUT depth         ; 8.30                        ;
+; Average LUT depth     ; 4.70                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1940,7 +1935,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1950,178 +1945,161 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 18 19:47:28 2022
+    Info: Processing started: Wed Oct 19 22:56:11 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopLevel -c TopLevel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file logicled.vhd
-    Info (12022): Found design unit 1: LogicLed-logic File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicLed.vhd Line: 18
-    Info (12023): Found entity 1: LogicLed File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicLed.vhd Line: 4
+    Info (12022): Found design unit 1: LogicLed-logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicLed.vhd Line: 18
+    Info (12023): Found entity 1: LogicLed File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicLed.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ulasomasub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 17
-    Info (12023): Found entity 1: ULASomaSub File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 6
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/ULASomaSub.vhd Line: 17
+    Info (12023): Found entity 1: ULASomaSub File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/ULASomaSub.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/somaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
-    Info (12022): Found design unit 1: Processador-arquitetura File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 31
-    Info (12023): Found entity 1: Processador File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 4
+    Info (12022): Found design unit 1: Processador-arquitetura File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 31
+    Info (12023): Found entity 1: Processador File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico4x1.vhd
-    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico4x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x1 File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico4x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico4x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x1 File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico4x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/memoriaROM.vhd Line: 18
-    Info (12023): Found entity 1: memoriaROM File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/memoriaROM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/memoriaROM.vhd Line: 18
+    Info (12023): Found entity 1: memoriaROM File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/memoriaROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/memoriaRAM.vhd Line: 21
-    Info (12023): Found entity 1: memoriaRAM File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/memoriaRAM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/memoriaRAM.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/memoriaRAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file logicadesvio.vhd
-    Info (12022): Found design unit 1: logicaDesvio-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/logicaDesvio.vhd Line: 14
-    Info (12023): Found entity 1: logicaDesvio File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/logicaDesvio.vhd Line: 4
+    Info (12022): Found design unit 1: logicaDesvio-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/logicaDesvio.vhd Line: 14
+    Info (12023): Found entity 1: logicaDesvio File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/logicaDesvio.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
-    Info (12022): Found design unit 1: flipflop-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/flipflop.vhd Line: 13
-    Info (12023): Found entity 1: flipflop File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/flipflop.vhd Line: 4
+    Info (12022): Found design unit 1: flipflop-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/flipflop.vhd Line: 13
+    Info (12023): Found entity 1: flipflop File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/flipflop.vhd Line: 4
 Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/edgeDetector.vhd Line: 10
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/edgeDetector.vhd Line: 23
-    Info (12023): Found entity 1: edgeDetector File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/edgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/edgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoderinstru.vhd
-    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/decoderInstru.vhd Line: 10
-    Info (12023): Found entity 1: decoderInstru File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/decoderInstru.vhd Line: 4
+    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/decoderInstru.vhd Line: 10
+    Info (12023): Found entity 1: decoderInstru File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/decoderInstru.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
-    Info (12022): Found design unit 1: TopLevel-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 35
-    Info (12023): Found entity 1: TopLevel File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 4
+    Info (12022): Found design unit 1: TopLevel-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 35
+    Info (12023): Found entity 1: TopLevel File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoder3x8.vhd
-    Info (12022): Found design unit 1: decoder3x8-decoder File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/decoder3x8.vhd Line: 10
-    Info (12023): Found entity 1: decoder3x8 File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/decoder3x8.vhd Line: 4
+    Info (12022): Found design unit 1: decoder3x8-decoder File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/decoder3x8.vhd Line: 10
+    Info (12023): Found entity 1: decoder3x8 File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/decoder3x8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file logicsevenseg.vhd
-    Info (12022): Found design unit 1: LogicSevenSeg-logic File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicSevenSeg.vhd Line: 23
-    Info (12023): Found entity 1: LogicSevenSeg File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicSevenSeg.vhd Line: 4
+    Info (12022): Found design unit 1: LogicSevenSeg-logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicSevenSeg.vhd Line: 23
+    Info (12023): Found entity 1: LogicSevenSeg File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicSevenSeg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3_state_8portas.vhd
-    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/buffer_3_state_8portas.vhd Line: 11
-    Info (12023): Found entity 1: buffer_3_state_8portas File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/buffer_3_state_8portas.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/buffer_3_state_8portas.vhd Line: 11
+    Info (12023): Found entity 1: buffer_3_state_8portas File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/buffer_3_state_8portas.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file logickeyswitch.vhd
-    Info (12022): Found design unit 1: LogicKeySwitch-logic File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicKeySwitch.vhd Line: 22
-    Info (12023): Found entity 1: LogicKeySwitch File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicKeySwitch.vhd Line: 4
+    Info (12022): Found design unit 1: LogicKeySwitch-logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicKeySwitch.vhd Line: 22
+    Info (12023): Found entity 1: LogicKeySwitch File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicKeySwitch.vhd Line: 4
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:\gravar:detectorSub0" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 59
-Info (12128): Elaborating entity "Processador" for hierarchy "Processador:CPU" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 66
-Warning (10541): VHDL Signal Declaration warning at Processador.vhd(45): used implicit default value for signal "flag_less_entrada" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 45
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:CPU|muxGenerico2x1:MUX_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 86
-Info (12128): Elaborating entity "logicaDesvio" for hierarchy "Processador:CPU|logicaDesvio:LogicaDesvio_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 93
-Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "Processador:CPU|muxGenerico4x1:MUX_JMP" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 102
-Info (12128): Elaborating entity "decoderInstru" for hierarchy "Processador:CPU|decoderInstru:DECODER_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 110
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:CPU|registradorGenerico:REGA_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 115
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:CPU|registradorGenerico:PC_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 123
-Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:CPU|somaConstante:incrementaPC_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 130
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "Processador:CPU|ULASomaSub:ULA_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 138
-Info (10041): Inferred latch for "saida[0]" at ULASomaSub.vhd(29) File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Info (10041): Inferred latch for "saida[1]" at ULASomaSub.vhd(29) File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Info (10041): Inferred latch for "saida[2]" at ULASomaSub.vhd(29) File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Info (10041): Inferred latch for "saida[3]" at ULASomaSub.vhd(29) File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Info (10041): Inferred latch for "saida[4]" at ULASomaSub.vhd(29) File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Info (10041): Inferred latch for "saida[5]" at ULASomaSub.vhd(29) File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Info (10041): Inferred latch for "saida[6]" at ULASomaSub.vhd(29) File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Info (10041): Inferred latch for "saida[7]" at ULASomaSub.vhd(29) File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Info (12128): Elaborating entity "flipflop" for hierarchy "Processador:CPU|flipflop:FLAG_zero_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/Processador.vhd Line: 146
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 80
-Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:DecoderBloco_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 89
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 95
-Info (12128): Elaborating entity "LogicLed" for hierarchy "LogicLed:LogicLed_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 111
-Info (12128): Elaborating entity "LogicSevenSeg" for hierarchy "LogicSevenSeg:LogicSevenSeg_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 124
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX0_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicSevenSeg.vhd Line: 54
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "LogicSevenSeg:LogicSevenSeg_item|conversorHex7Seg:HEX0Conversor_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicSevenSeg.vhd Line: 66
-Info (12128): Elaborating entity "LogicKeySwitch" for hierarchy "LogicKeySwitch:LogicKeySwitch_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 141
-Warning (10036): Verilog HDL or VHDL warning at LogicKeySwitch.vhd(28): object "Key1_signal" assigned a value but never read File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicKeySwitch.vhd Line: 28
-Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "LogicKeySwitch:LogicKeySwitch_item|buffer_3_state_8portas:Fpga_Reset_item" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/LogicKeySwitch.vhd Line: 49
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:\gravar:detectorSub0" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 59
+Info (12128): Elaborating entity "Processador" for hierarchy "Processador:CPU" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 66
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:CPU|muxGenerico2x1:MUX_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 81
+Info (12128): Elaborating entity "logicaDesvio" for hierarchy "Processador:CPU|logicaDesvio:LogicaDesvio_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 88
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "Processador:CPU|muxGenerico4x1:MUX_JMP" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 97
+Info (12128): Elaborating entity "decoderInstru" for hierarchy "Processador:CPU|decoderInstru:DECODER_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 105
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:CPU|registradorGenerico:REGA_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 110
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:CPU|registradorGenerico:PC_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 118
+Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:CPU|somaConstante:incrementaPC_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 125
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "Processador:CPU|ULASomaSub:ULA_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 133
+Info (12128): Elaborating entity "flipflop" for hierarchy "Processador:CPU|flipflop:FLAG_zero_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/Processador.vhd Line: 142
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 80
+Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:DecoderBloco_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 89
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 95
+Info (12128): Elaborating entity "LogicLed" for hierarchy "LogicLed:LogicLed_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 111
+Info (12128): Elaborating entity "LogicSevenSeg" for hierarchy "LogicSevenSeg:LogicSevenSeg_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 124
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX0_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicSevenSeg.vhd Line: 54
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "LogicSevenSeg:LogicSevenSeg_item|conversorHex7Seg:HEX0Conversor_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicSevenSeg.vhd Line: 66
+Info (12128): Elaborating entity "LogicKeySwitch" for hierarchy "LogicKeySwitch:LogicKeySwitch_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 141
+Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "LogicKeySwitch:LogicKeySwitch_item|buffer_3_state_8portas:Fpga_Reset_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/LogicKeySwitch.vhd Line: 49
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/memoriaRAM.vhd Line: 27
-    Info (276004): RAM logic "memoriaROM:ROM|memROM" is uninferred due to inappropriate RAM size File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/memoriaROM.vhd Line: 55
+    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/memoriaRAM.vhd Line: 27
+    Info (276004): RAM logic "memoriaROM:ROM|memROM" is uninferred due to inappropriate RAM size File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/memoriaROM.vhd Line: 55
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13048): Converted tri-state node "Data_out_MEM[7]" into a selector File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[6]" into a selector File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[5]" into a selector File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[4]" into a selector File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[3]" into a selector File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[2]" into a selector File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[1]" into a selector File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[0]" into a selector File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/muxGenerico2x1.vhd Line: 10
-Warning (14026): LATCH primitive "Processador:CPU|ULASomaSub:ULA_item|saida[0]" is permanently enabled File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Warning (14026): LATCH primitive "Processador:CPU|ULASomaSub:ULA_item|saida[1]" is permanently enabled File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Warning (14026): LATCH primitive "Processador:CPU|ULASomaSub:ULA_item|saida[2]" is permanently enabled File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Warning (14026): LATCH primitive "Processador:CPU|ULASomaSub:ULA_item|saida[3]" is permanently enabled File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Warning (14026): LATCH primitive "Processador:CPU|ULASomaSub:ULA_item|saida[4]" is permanently enabled File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Warning (14026): LATCH primitive "Processador:CPU|ULASomaSub:ULA_item|saida[5]" is permanently enabled File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Warning (14026): LATCH primitive "Processador:CPU|ULASomaSub:ULA_item|saida[6]" is permanently enabled File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
-Warning (14026): LATCH primitive "Processador:CPU|ULASomaSub:ULA_item|saida[7]" is permanently enabled File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/ULASomaSub.vhd Line: 29
+    Warning (13048): Converted tri-state node "Data_out_MEM[7]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[6]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[5]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[4]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[3]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[2]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[1]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[0]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/muxGenerico2x1.vhd Line: 10
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "control[2]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 16
-    Warning (13410): Pin "control[3]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 16
-    Warning (13410): Pin "control[4]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 16
-    Warning (13410): Pin "control[7]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 16
-    Warning (13410): Pin "LedR[0]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 17
-    Warning (13410): Pin "LedR[1]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 17
-    Warning (13410): Pin "LedR[2]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 17
-    Warning (13410): Pin "LedR[3]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 17
-    Warning (13410): Pin "LedR[4]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 17
-    Warning (13410): Pin "LedR[5]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 17
-    Warning (13410): Pin "LedR[6]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 17
-    Warning (13410): Pin "LedR[7]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 17
-    Warning (13410): Pin "LedR[8]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 17
-    Warning (13410): Pin "LedR[9]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 17
-    Warning (13410): Pin "Hex4[0]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 23
-    Warning (13410): Pin "Hex4[1]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 23
-    Warning (13410): Pin "Hex4[2]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 23
-    Warning (13410): Pin "Hex4[3]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 23
-    Warning (13410): Pin "Hex4[4]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 23
-    Warning (13410): Pin "Hex4[5]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 23
-    Warning (13410): Pin "Hex4[6]" is stuck at VCC File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 23
-    Warning (13410): Pin "Hex5[0]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 24
-    Warning (13410): Pin "Hex5[1]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 24
-    Warning (13410): Pin "Hex5[2]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 24
-    Warning (13410): Pin "Hex5[3]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 24
-    Warning (13410): Pin "Hex5[4]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 24
-    Warning (13410): Pin "Hex5[5]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 24
-    Warning (13410): Pin "Hex5[6]" is stuck at VCC File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 24
-    Warning (13410): Pin "RAM_simu[2]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 30
-    Warning (13410): Pin "RAM_simu[3]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 30
-    Warning (13410): Pin "RAM_simu[4]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 30
-    Warning (13410): Pin "RAM_simu[7]" is stuck at GND File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 30
+    Warning (13410): Pin "control[2]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 16
+    Warning (13410): Pin "control[3]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 16
+    Warning (13410): Pin "control[4]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 16
+    Warning (13410): Pin "control[7]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 16
+    Warning (13410): Pin "LedR[0]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 17
+    Warning (13410): Pin "LedR[1]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 17
+    Warning (13410): Pin "LedR[2]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 17
+    Warning (13410): Pin "LedR[3]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 17
+    Warning (13410): Pin "LedR[4]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 17
+    Warning (13410): Pin "LedR[5]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 17
+    Warning (13410): Pin "LedR[6]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 17
+    Warning (13410): Pin "LedR[7]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 17
+    Warning (13410): Pin "LedR[8]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 17
+    Warning (13410): Pin "LedR[9]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 17
+    Warning (13410): Pin "Hex4[0]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 23
+    Warning (13410): Pin "Hex4[1]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 23
+    Warning (13410): Pin "Hex4[2]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 23
+    Warning (13410): Pin "Hex4[3]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 23
+    Warning (13410): Pin "Hex4[4]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 23
+    Warning (13410): Pin "Hex4[5]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 23
+    Warning (13410): Pin "Hex4[6]" is stuck at VCC File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 23
+    Warning (13410): Pin "Hex5[0]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 24
+    Warning (13410): Pin "Hex5[1]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 24
+    Warning (13410): Pin "Hex5[2]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 24
+    Warning (13410): Pin "Hex5[3]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 24
+    Warning (13410): Pin "Hex5[4]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 24
+    Warning (13410): Pin "Hex5[5]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 24
+    Warning (13410): Pin "Hex5[6]" is stuck at VCC File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 24
+    Warning (13410): Pin "RAM_simu[2]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 30
+    Warning (13410): Pin "RAM_simu[3]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 30
+    Warning (13410): Pin "RAM_simu[4]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 30
+    Warning (13410): Pin "RAM_simu[7]" is stuck at GND File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 30
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 897 registers lost all their fanouts during netlist optimizations.
+Info (17049): 898 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Fpga_reset_N" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 14
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 12
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 12
-    Warning (15610): No output dependent on input pin "Sw[9]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 13
-    Warning (15610): No output dependent on input pin "Sw[8]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 13
-    Warning (15610): No output dependent on input pin "Sw[0]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 13
-    Warning (15610): No output dependent on input pin "Sw[1]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 13
-    Warning (15610): No output dependent on input pin "Sw[2]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 13
-    Warning (15610): No output dependent on input pin "Sw[3]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 13
-    Warning (15610): No output dependent on input pin "Sw[4]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 13
-    Warning (15610): No output dependent on input pin "Sw[5]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 13
-    Warning (15610): No output dependent on input pin "Sw[6]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 13
-    Warning (15610): No output dependent on input pin "Sw[7]" File: C:/Users/User/Desktop/Insper/6_semestre/descomp/Aula8/DesignComputadores/Aula8e/TopLevel.vhd Line: 13
-Info (21057): Implemented 287 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 14 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Fpga_reset_N" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 14
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 12
+    Warning (15610): No output dependent on input pin "Sw[7]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 13
+    Warning (15610): No output dependent on input pin "Sw[6]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 13
+    Warning (15610): No output dependent on input pin "Sw[5]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 13
+    Warning (15610): No output dependent on input pin "Sw[4]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 13
+    Warning (15610): No output dependent on input pin "Sw[3]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 13
+    Warning (15610): No output dependent on input pin "Sw[2]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 13
+    Warning (15610): No output dependent on input pin "Sw[1]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 13
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 12
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 12
+    Warning (15610): No output dependent on input pin "Sw[9]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 13
+    Warning (15610): No output dependent on input pin "Sw[8]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 13
+    Warning (15610): No output dependent on input pin "Sw[0]" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador_JST_CLT/TopLevel.vhd Line: 13
+Info (21057): Implemented 305 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 91 output pins
-    Info (21061): Implemented 180 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Tue Oct 18 19:48:32 2022
-    Info: Elapsed time: 00:01:04
-    Info: Total CPU time (on all processors): 00:02:00
+    Info (21061): Implemented 198 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Wed Oct 19 22:56:23 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
 
 

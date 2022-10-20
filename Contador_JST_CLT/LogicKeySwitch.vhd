@@ -118,7 +118,7 @@ entity LogicKeySwitch is
   
 					  port map  (
 					  
-										entrada  => "0000000" & Key(1),
+										entrada  => "0000000" & Key1_signal,
 										habilita => (RD and Data_address(5) and decoderEndereco(1) and decoderBloco(5)),
 										saida    => Data_in
 					  

@@ -50,7 +50,6 @@ architecture arquitetura of Processador is
   alias opcode: std_logic_vector(3 downto 0) is instruction(12 downto 9); 
   alias controle: std_logic_vector(12 downto 0) is DECODER_saida;
   alias MUX1: std_logic_vector(7 downto 0) is instruction(7 downto 0);
-  alias MUX0: std_logic_vector(7 downto 0) is MEM_saida(larguraDados-1 downto 0);
   alias ULA_A: std_logic_vector(7 downto 0) is REGA_saida(larguraDados-1 downto 0);
   alias ULA_B: std_logic_vector(7 downto 0) is MUX_saida(larguraDados-1 downto 0);
   alias SelULA: std_logic_vector(1 downto 0) is controle(4 downto 3);
@@ -59,10 +58,6 @@ architecture arquitetura of Processador is
   alias Habilita_A: std_logic is controle(5);
   alias MEM_leitura: std_logic is controle(1);
   alias MEM_escrita: std_logic is controle(0);
-  alias MEM_habilita: std_logic is instruction(8);
-  alias MEM_endereco: std_logic_vector(7 downto 0) is instruction(7 downto 0);
-  alias MEM_entrada: std_logic_vector(larguraDados-1 downto 0) is REGA_saida;
-  alias MUX_JMP_saida: std_logic_vector(8 downto 0) is PC_entrada;
   
   alias habilita_flag_zero: std_logic is controle(2);
   alias habilita_flag_ret: std_logic is controle(11);
@@ -140,7 +135,8 @@ ULA_item : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
 						  entradaB => ULA_B,
 						  saida => ULA_saida, 
 						  seletor => SelULA,
-						  flag_zero => flag_zero_entrada);
+						  flag_zero => flag_zero_entrada,
+						  flag_less => flag_less_entrada);
 
 -- Port map da Flag de zero
 FLAG_zero_item : entity work.flipflop 

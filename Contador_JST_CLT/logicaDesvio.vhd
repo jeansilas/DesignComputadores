@@ -22,7 +22,7 @@ architecture comportamento of logicaDesvio is
 
   begin
   
-	saida(0) <=  JMP or (JEQ and flag_zero) or JSR or JST;
+	saida(0) <=  JMP or (JEQ and flag_zero) or JSR or (JST and flag_less);
 	saida(1) <= RET;
 
 

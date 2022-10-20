@@ -26,11 +26,10 @@ architecture comportamento of ULASomaSub is
 		And_op <= std_logic_vector(unsigned(entradaA) and unsigned(entradaB));
 
 		
-      saida <= soma when (seletor = "01") else 
-					subtracao when (seletor = "00") else
-					entradaB when (seletor = "10")  else
-					And_op when (seletor = "11")
-					;
+      saida <= soma 		 	when 		(seletor = "01") 		else 
+					subtracao 	when     (seletor = "00") 	   else
+					entradaB  	when 	   (seletor = "10")  	else
+					And_op;
 		
 		
 		flag_less <= subtracao(7);

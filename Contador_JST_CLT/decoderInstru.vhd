@@ -29,7 +29,7 @@ saida <= "0000000000000" when opcode = NOP  	else
          "0000000110010" when opcode = LDA  	else
          "0000000101010" when opcode = SOMA 	else
          "0000000100010" when opcode = SUB  	else
-			"0000000111010" when opcode = ANDOP 	else
+			"0000000111010" when opcode = ANDOP else
          "0000001110000" when opcode = LDI  	else
 			"0000000000001" when opcode = STA  	else
 			"0010000000000" when opcode = JMP  	else
