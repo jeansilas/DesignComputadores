@@ -50,7 +50,7 @@ entity LogicKeySwitch is
   
 					  port map  (
 					  
-										entrada  => "0000000" & Fpga_reset,
+										entrada  => "0000000" & not(Fpga_reset),
 										habilita => (RD and Data_address(5) and decoderEndereco(4) and decoderBloco(5)),
 										saida    => Data_in
 					  
@@ -60,7 +60,7 @@ entity LogicKeySwitch is
   
 					  port map  (
 					  
-										entrada  => "0000000" & Key(3),
+										entrada  => "0000000" & not(Key(3)),
 										habilita => (RD and Data_address(5) and decoderEndereco(3) and decoderBloco(5)),
 										saida    => Data_in
 					  
@@ -70,7 +70,7 @@ entity LogicKeySwitch is
   
 					  port map  (
 					  
-										entrada  => "0000000" & Key(2),
+										entrada  => "0000000" & not(Key(2)),
 										habilita => (RD and Data_address(5) and decoderEndereco(2) and decoderBloco(5)),
 										saida    => Data_in
 					  
@@ -166,7 +166,7 @@ entity LogicKeySwitch is
 					  port map  (
 					  
 										entrada  => "0000000" & Key0_signal,
-										habilita => (RD and Data_address(5) and decoderEndereco(3) and decoderBloco(5)),
+										habilita => RD and Data_address(5) and decoderEndereco(0) and decoderBloco(5),
 										saida    => Data_in
 					  
 					  );
@@ -177,7 +177,7 @@ entity LogicKeySwitch is
 					  port map  (
 					  
 										entrada  => "0000000" & Sw9,
-										habilita => (RD and not(Data_address(5)) and decoderEndereco(2) and decoderBloco(5)),
+										habilita => RD and (not Data_address(5)) and decoderEndereco(2) and decoderBloco(5),
 										saida    => Data_in
 					  
 					  );
@@ -187,7 +187,7 @@ entity LogicKeySwitch is
 					  port map  (
 					  
 										entrada  => "0000000" & Sw8,
-										habilita => (RD and not(Data_address(5)) and decoderEndereco(1) and decoderBloco(5)),
+										habilita => RD and (not Data_address(5)) and decoderEndereco(1) and decoderBloco(5),
 										saida    => Data_in
 					  
 					  );
@@ -196,7 +196,7 @@ entity LogicKeySwitch is
 					  port map  (
 					  
 										entrada  => Sw,
-										habilita => (RD and not(Data_address(5)) and decoderEndereco(0) and decoderBloco(5)),
+										habilita => RD and (not Data_address(5)) and decoderEndereco(0) and decoderBloco(5),
 										saida    => Data_in
 					  
 					  );

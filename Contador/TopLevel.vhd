@@ -53,15 +53,18 @@ architecture comportamento of TopLevel is
 
 begin
 
-gravar:  if simulacao generate
-	CLK <= KEY(0);
-	else generate
-	detectorSub0: work.edgeDetector(bordaSubida)
-			  port map (
-						clk => CLOCK_50,
-						entrada => (not KEY(0)),
-						saida => CLK);
-	end generate;
+--gravar:  if simulacao generate
+--	CLK <= KEY(0);
+--	else generate
+----	detectorSub0: work.edgeDetector(bordaSubida)
+----			  port map (
+----						clk => CLOCK_50,
+----						entrada => (not KEY(0)),
+----						saida => CLK);
+--CLK<=clock_50;
+--	end generate;
+
+CLK <= CLOCK_50;
 
 CPU: entity work.Processador
 	
@@ -92,10 +95,10 @@ ROM: entity work.memoriaROM
 										 saida => decoderBloco 
   );
 
-RAM: entity work.memoriaRAM generic map (addrWidth => 7)
+RAM: entity work.memoriaRAM generic map (addrWidth => 6)
 						
 					  port map (
-										 addr => Data_address(6 downto 0), -- Mdmória de 64kb 2^6 = 64.
+										 addr => Data_address(5 downto 0), -- Mdmória de 64kb 2^6 = 64.
 										 we => WR, 
 										 re => RD,
 										 habilita => decoderBloco(0),
