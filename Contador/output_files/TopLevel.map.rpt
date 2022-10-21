@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TopLevel
-Thu Oct 20 19:53:33 2022
+Fri Oct 21 14:53:57 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -99,7 +99,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 20 19:53:33 2022       ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 21 14:53:57 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; TopLevel                                    ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -227,31 +227,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; LogicLed.vhd                     ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicLed.vhd               ;         ;
-; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/ULASomaSub.vhd             ;         ;
-; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/somaConstante.vhd          ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/registradorGenerico.vhd    ;         ;
-; Processador.vhd                  ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd            ;         ;
-; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico4x1.vhd         ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd         ;         ;
-; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/memoriaROM.vhd             ;         ;
-; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/memoriaRAM.vhd             ;         ;
-; logicaDesvio.vhd                 ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/logicaDesvio.vhd           ;         ;
-; flipflop.vhd                     ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/flipflop.vhd               ;         ;
-; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/edgeDetector.vhd           ;         ;
-; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/decoderInstru.vhd          ;         ;
-; TopLevel.vhd                     ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/TopLevel.vhd               ;         ;
-; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/decoder3x8.vhd             ;         ;
-; LogicSevenSeg.vhd                ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicSevenSeg.vhd          ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/conversorHex7Seg.vhd       ;         ;
-; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/buffer_3_state_8portas.vhd ;         ;
-; LogicKeySwitch.vhd               ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicKeySwitch.vhd         ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                           ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------+---------+
+; LogicLed.vhd                     ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicLed.vhd               ;         ;
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/ULASomaSub.vhd             ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/somaConstante.vhd          ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/registradorGenerico.vhd    ;         ;
+; Processador.vhd                  ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd            ;         ;
+; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico4x1.vhd         ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd         ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/memoriaROM.vhd             ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/memoriaRAM.vhd             ;         ;
+; logicaDesvio.vhd                 ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/logicaDesvio.vhd           ;         ;
+; flipflop.vhd                     ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/flipflop.vhd               ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/edgeDetector.vhd           ;         ;
+; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/decoderInstru.vhd          ;         ;
+; TopLevel.vhd                     ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd               ;         ;
+; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/decoder3x8.vhd             ;         ;
+; LogicSevenSeg.vhd                ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicSevenSeg.vhd          ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/conversorHex7Seg.vhd       ;         ;
+; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/buffer_3_state_8portas.vhd ;         ;
+; LogicKeySwitch.vhd               ; yes             ; User VHDL File  ; C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicKeySwitch.vhd         ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -259,14 +259,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 495            ;
+; Estimate of Logic utilization (ALMs needed) ; 496            ;
 ;                                             ;                ;
 ; Combinational ALUT usage for logic          ; 553            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 334            ;
-;     -- 5 input functions                    ; 43             ;
-;     -- 4 input functions                    ; 74             ;
-;     -- <=3 input functions                  ; 102            ;
+;     -- 6 input functions                    ; 343            ;
+;     -- 5 input functions                    ; 37             ;
+;     -- 4 input functions                    ; 80             ;
+;     -- <=3 input functions                  ; 93             ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 578            ;
 ;                                             ;                ;
@@ -276,8 +276,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 576            ;
-; Total fan-out                               ; 4659           ;
-; Average fan-out                             ; 3.46           ;
+; Total fan-out                               ; 4682           ;
+; Average fan-out                             ; 3.48           ;
 +---------------------------------------------+----------------+
 
 
@@ -286,19 +286,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name         ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+---------------------+--------------+
-; |TopLevel                                   ; 553 (27)            ; 578 (0)                   ; 0                 ; 0          ; 107  ; 0            ; |TopLevel                                                                      ; TopLevel            ; work         ;
-;    |LogicKeySwitch:LogicKeySwitch_item|     ; 14 (9)              ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicKeySwitch:LogicKeySwitch_item                                   ; LogicKeySwitch      ; work         ;
-;       |decoder3x8:DecoderBloco_item|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicKeySwitch:LogicKeySwitch_item|decoder3x8:DecoderBloco_item      ; decoder3x8          ; work         ;
+; |TopLevel                                   ; 553 (26)            ; 578 (0)                   ; 0                 ; 0          ; 107  ; 0            ; |TopLevel                                                                      ; TopLevel            ; work         ;
+;    |LogicKeySwitch:LogicKeySwitch_item|     ; 9 (5)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicKeySwitch:LogicKeySwitch_item                                   ; LogicKeySwitch      ; work         ;
 ;       |edgeDetector:EdgeDetector0_item|     ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicKeySwitch:LogicKeySwitch_item|edgeDetector:EdgeDetector0_item   ; edgeDetector        ; work         ;
 ;       |edgeDetector:EdgeDetector1_item|     ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicKeySwitch:LogicKeySwitch_item|edgeDetector:EdgeDetector1_item   ; edgeDetector        ; work         ;
 ;       |flipflop:Debouncer_Key0_item|        ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicKeySwitch:LogicKeySwitch_item|flipflop:Debouncer_Key0_item      ; flipflop            ; work         ;
 ;       |flipflop:Debouncer_Key1_item|        ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicKeySwitch:LogicKeySwitch_item|flipflop:Debouncer_Key1_item      ; flipflop            ; work         ;
-;    |LogicLed:LogicLed_item|                 ; 4 (1)               ; 10 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicLed:LogicLed_item                                               ; LogicLed            ; work         ;
-;       |decoder3x8:DecoderBloco_item|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicLed:LogicLed_item|decoder3x8:DecoderBloco_item                  ; decoder3x8          ; work         ;
+;    |LogicLed:LogicLed_item|                 ; 5 (3)               ; 10 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicLed:LogicLed_item                                               ; LogicLed            ; work         ;
 ;       |flipflop:LED_8_item|                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicLed:LogicLed_item|flipflop:LED_8_item                           ; flipflop            ; work         ;
 ;       |flipflop:LED_9_item|                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicLed:LogicLed_item|flipflop:LED_9_item                           ; flipflop            ; work         ;
 ;       |registradorGenerico:LEDR_item|       ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicLed:LogicLed_item|registradorGenerico:LEDR_item                 ; registradorGenerico ; work         ;
-;    |LogicSevenSeg:LogicSevenSeg_item|       ; 53 (11)             ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item                                     ; LogicSevenSeg       ; work         ;
+;    |LogicSevenSeg:LogicSevenSeg_item|       ; 51 (9)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item                                     ; LogicSevenSeg       ; work         ;
 ;       |conversorHex7Seg:HEX0Conversor_item| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|conversorHex7Seg:HEX0Conversor_item ; conversorHex7Seg    ; work         ;
 ;       |conversorHex7Seg:HEX1Conversor_item| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|conversorHex7Seg:HEX1Conversor_item ; conversorHex7Seg    ; work         ;
 ;       |conversorHex7Seg:HEX2Conversor_item| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|conversorHex7Seg:HEX2Conversor_item ; conversorHex7Seg    ; work         ;
@@ -311,9 +309,9 @@ https://fpgasoftware.intel.com/eula.
 ;       |registradorGenerico:HEX3_item|       ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX3_item       ; registradorGenerico ; work         ;
 ;       |registradorGenerico:HEX4_item|       ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX4_item       ; registradorGenerico ; work         ;
 ;       |registradorGenerico:HEX5_item|       ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX5_item       ; registradorGenerico ; work         ;
-;    |Processador:CPU|                        ; 65 (0)              ; 28 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU                                                      ; Processador         ; work         ;
+;    |Processador:CPU|                        ; 66 (0)              ; 28 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU                                                      ; Processador         ; work         ;
 ;       |ULASomaSub:ULA_item|                 ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|ULASomaSub:ULA_item                                  ; ULASomaSub          ; work         ;
-;       |decoderInstru:DECODER_item|          ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|decoderInstru:DECODER_item                           ; decoderInstru       ; work         ;
+;       |decoderInstru:DECODER_item|          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|decoderInstru:DECODER_item                           ; decoderInstru       ; work         ;
 ;       |flipflop:FLAG_less_item|             ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|flipflop:FLAG_less_item                              ; flipflop            ; work         ;
 ;       |flipflop:FLAG_zero_item|             ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|flipflop:FLAG_zero_item                              ; flipflop            ; work         ;
 ;       |muxGenerico2x1:MUX_item|             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|muxGenerico2x1:MUX_item                              ; muxGenerico2x1      ; work         ;
@@ -323,7 +321,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |registradorGenerico:REGA_item|       ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|registradorGenerico:REGA_item                        ; registradorGenerico ; work         ;
 ;       |somaConstante:incrementaPC_item|     ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Processador:CPU|somaConstante:incrementaPC_item                      ; somaConstante       ; work         ;
 ;    |memoriaRAM:RAM|                         ; 298 (298)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|memoriaRAM:RAM                                                       ; memoriaRAM          ; work         ;
-;    |memoriaROM:ROM|                         ; 92 (92)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|memoriaROM:ROM                                                       ; memoriaROM          ; work         ;
+;    |memoriaROM:ROM|                         ; 98 (98)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|memoriaROM:ROM                                                       ; memoriaROM          ; work         ;
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -909,15 +907,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 8                           ;
 ;     normal            ; 527                         ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 75                          ;
-;         3 data inputs ; 15                          ;
-;         4 data inputs ; 66                          ;
-;         5 data inputs ; 35                          ;
-;         6 data inputs ; 334                         ;
+;         2 data inputs ; 73                          ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 72                          ;
+;         5 data inputs ; 29                          ;
+;         6 data inputs ; 343                         ;
 ; boundary_port         ; 107                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.30                       ;
-; Average LUT depth     ; 7.49                        ;
+; Average LUT depth     ; 7.52                        ;
 +-----------------------+-----------------------------+
 
 
@@ -926,7 +924,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -936,99 +934,99 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 20 19:53:13 2022
+    Info: Processing started: Fri Oct 21 14:53:39 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopLevel -c TopLevel
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file logicled.vhd
-    Info (12022): Found design unit 1: LogicLed-logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicLed.vhd Line: 18
-    Info (12023): Found entity 1: LogicLed File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicLed.vhd Line: 4
+    Info (12022): Found design unit 1: LogicLed-logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicLed.vhd Line: 18
+    Info (12023): Found entity 1: LogicLed File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicLed.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ulasomasub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/ULASomaSub.vhd Line: 17
-    Info (12023): Found entity 1: ULASomaSub File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/ULASomaSub.vhd Line: 6
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/ULASomaSub.vhd Line: 17
+    Info (12023): Found entity 1: ULASomaSub File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/ULASomaSub.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/somaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
-    Info (12022): Found design unit 1: Processador-arquitetura File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 31
-    Info (12023): Found entity 1: Processador File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 4
+    Info (12022): Found design unit 1: Processador-arquitetura File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 31
+    Info (12023): Found entity 1: Processador File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico4x1.vhd
-    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico4x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x1 File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico4x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico4x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x1 File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico4x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/memoriaROM.vhd Line: 18
-    Info (12023): Found entity 1: memoriaROM File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/memoriaROM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/memoriaROM.vhd Line: 18
+    Info (12023): Found entity 1: memoriaROM File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/memoriaROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/memoriaRAM.vhd Line: 21
-    Info (12023): Found entity 1: memoriaRAM File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/memoriaRAM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/memoriaRAM.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/memoriaRAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file logicadesvio.vhd
-    Info (12022): Found design unit 1: logicaDesvio-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/logicaDesvio.vhd Line: 14
-    Info (12023): Found entity 1: logicaDesvio File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/logicaDesvio.vhd Line: 4
+    Info (12022): Found design unit 1: logicaDesvio-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/logicaDesvio.vhd Line: 14
+    Info (12023): Found entity 1: logicaDesvio File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/logicaDesvio.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
-    Info (12022): Found design unit 1: flipflop-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/flipflop.vhd Line: 13
-    Info (12023): Found entity 1: flipflop File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/flipflop.vhd Line: 4
+    Info (12022): Found design unit 1: flipflop-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/flipflop.vhd Line: 13
+    Info (12023): Found entity 1: flipflop File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/flipflop.vhd Line: 4
 Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/edgeDetector.vhd Line: 10
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/edgeDetector.vhd Line: 23
-    Info (12023): Found entity 1: edgeDetector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/edgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/edgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoderinstru.vhd
-    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/decoderInstru.vhd Line: 10
-    Info (12023): Found entity 1: decoderInstru File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/decoderInstru.vhd Line: 4
+    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/decoderInstru.vhd Line: 10
+    Info (12023): Found entity 1: decoderInstru File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/decoderInstru.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
-    Info (12022): Found design unit 1: TopLevel-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/TopLevel.vhd Line: 35
-    Info (12023): Found entity 1: TopLevel File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/TopLevel.vhd Line: 4
+    Info (12022): Found design unit 1: TopLevel-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd Line: 35
+    Info (12023): Found entity 1: TopLevel File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoder3x8.vhd
-    Info (12022): Found design unit 1: decoder3x8-decoder File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/decoder3x8.vhd Line: 10
-    Info (12023): Found entity 1: decoder3x8 File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/decoder3x8.vhd Line: 4
+    Info (12022): Found design unit 1: decoder3x8-decoder File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/decoder3x8.vhd Line: 10
+    Info (12023): Found entity 1: decoder3x8 File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/decoder3x8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file logicsevenseg.vhd
-    Info (12022): Found design unit 1: LogicSevenSeg-logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicSevenSeg.vhd Line: 23
-    Info (12023): Found entity 1: LogicSevenSeg File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicSevenSeg.vhd Line: 4
+    Info (12022): Found design unit 1: LogicSevenSeg-logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicSevenSeg.vhd Line: 23
+    Info (12023): Found entity 1: LogicSevenSeg File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicSevenSeg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3_state_8portas.vhd
-    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/buffer_3_state_8portas.vhd Line: 11
-    Info (12023): Found entity 1: buffer_3_state_8portas File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/buffer_3_state_8portas.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/buffer_3_state_8portas.vhd Line: 11
+    Info (12023): Found entity 1: buffer_3_state_8portas File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/buffer_3_state_8portas.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file logickeyswitch.vhd
-    Info (12022): Found design unit 1: LogicKeySwitch-logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicKeySwitch.vhd Line: 22
-    Info (12023): Found entity 1: LogicKeySwitch File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicKeySwitch.vhd Line: 4
+    Info (12022): Found design unit 1: LogicKeySwitch-logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicKeySwitch.vhd Line: 22
+    Info (12023): Found entity 1: LogicKeySwitch File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicKeySwitch.vhd Line: 4
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Info (12128): Elaborating entity "Processador" for hierarchy "Processador:CPU" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/TopLevel.vhd Line: 69
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:CPU|muxGenerico2x1:MUX_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 81
-Info (12128): Elaborating entity "logicaDesvio" for hierarchy "Processador:CPU|logicaDesvio:LogicaDesvio_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 88
-Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "Processador:CPU|muxGenerico4x1:MUX_JMP" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 97
-Info (12128): Elaborating entity "decoderInstru" for hierarchy "Processador:CPU|decoderInstru:DECODER_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 105
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:CPU|registradorGenerico:REGA_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 110
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:CPU|registradorGenerico:PC_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 118
-Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:CPU|somaConstante:incrementaPC_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 125
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "Processador:CPU|ULASomaSub:ULA_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 133
-Info (12128): Elaborating entity "flipflop" for hierarchy "Processador:CPU|flipflop:FLAG_zero_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/Processador.vhd Line: 142
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/TopLevel.vhd Line: 83
-Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:DecoderBloco_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/TopLevel.vhd Line: 92
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/TopLevel.vhd Line: 98
-Info (12128): Elaborating entity "LogicLed" for hierarchy "LogicLed:LogicLed_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/TopLevel.vhd Line: 114
-Info (12128): Elaborating entity "LogicSevenSeg" for hierarchy "LogicSevenSeg:LogicSevenSeg_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/TopLevel.vhd Line: 127
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX0_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicSevenSeg.vhd Line: 54
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "LogicSevenSeg:LogicSevenSeg_item|conversorHex7Seg:HEX0Conversor_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicSevenSeg.vhd Line: 66
-Info (12128): Elaborating entity "LogicKeySwitch" for hierarchy "LogicKeySwitch:LogicKeySwitch_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/TopLevel.vhd Line: 144
-Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "LogicKeySwitch:LogicKeySwitch_item|buffer_3_state_8portas:Fpga_Reset_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicKeySwitch.vhd Line: 49
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "LogicKeySwitch:LogicKeySwitch_item|edgeDetector:EdgeDetector1_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/LogicKeySwitch.vhd Line: 79
+Info (12128): Elaborating entity "Processador" for hierarchy "Processador:CPU" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd Line: 69
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:CPU|muxGenerico2x1:MUX_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 81
+Info (12128): Elaborating entity "logicaDesvio" for hierarchy "Processador:CPU|logicaDesvio:LogicaDesvio_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 88
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "Processador:CPU|muxGenerico4x1:MUX_JMP" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 97
+Info (12128): Elaborating entity "decoderInstru" for hierarchy "Processador:CPU|decoderInstru:DECODER_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 105
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:CPU|registradorGenerico:REGA_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 110
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:CPU|registradorGenerico:PC_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 118
+Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:CPU|somaConstante:incrementaPC_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 125
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "Processador:CPU|ULASomaSub:ULA_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 133
+Info (12128): Elaborating entity "flipflop" for hierarchy "Processador:CPU|flipflop:FLAG_zero_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd Line: 142
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd Line: 83
+Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:DecoderBloco_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd Line: 92
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd Line: 98
+Info (12128): Elaborating entity "LogicLed" for hierarchy "LogicLed:LogicLed_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd Line: 114
+Info (12128): Elaborating entity "LogicSevenSeg" for hierarchy "LogicSevenSeg:LogicSevenSeg_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd Line: 127
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "LogicSevenSeg:LogicSevenSeg_item|registradorGenerico:HEX0_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicSevenSeg.vhd Line: 54
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "LogicSevenSeg:LogicSevenSeg_item|conversorHex7Seg:HEX0Conversor_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicSevenSeg.vhd Line: 66
+Info (12128): Elaborating entity "LogicKeySwitch" for hierarchy "LogicKeySwitch:LogicKeySwitch_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd Line: 144
+Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "LogicKeySwitch:LogicKeySwitch_item|buffer_3_state_8portas:Fpga_Reset_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicKeySwitch.vhd Line: 49
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "LogicKeySwitch:LogicKeySwitch_item|edgeDetector:EdgeDetector1_item" File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicKeySwitch.vhd Line: 79
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/memoriaRAM.vhd Line: 27
+    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/memoriaRAM.vhd Line: 27
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13048): Converted tri-state node "Data_out_MEM[7]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[6]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[5]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[4]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[3]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[2]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[1]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_out_MEM[0]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[7]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[6]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[5]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[4]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[3]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[2]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[1]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_out_MEM[0]" into a selector File: C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1037,9 +1035,9 @@ Info (21057): Implemented 1223 device resources after synthesis - the final reso
     Info (21059): Implemented 91 output pins
     Info (21061): Implemented 1116 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4855 megabytes
-    Info: Processing ended: Thu Oct 20 19:53:33 2022
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Fri Oct 21 14:53:57 2022
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:31
 
 

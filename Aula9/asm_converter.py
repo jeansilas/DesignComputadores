@@ -70,6 +70,10 @@ class Assembler:
             for line in archive.readlines():
                 # Separating comments from the line content
                 content = self.sep_content(line,self.stringComment)
+                if self.stringComment in line:
+                    comment = "     -- " + self.sep_content(line,self.stringComment,pos=1)
+                else:
+                    comment = ""
 
                 if  (self.stopOpcodes[0] in content):
                     if self.Isbin:
@@ -85,7 +89,7 @@ class Assembler:
                     except:
                         pass
 
-                    self.lines[id_line] = [opcode,number]
+                    self.lines[id_line] = [opcode,number,comment]
                     id_line += 1
 
                 elif  (self.stopOpcodes[1] in content):
@@ -101,22 +105,22 @@ class Assembler:
                     except:
                         pass
 
-                    self.lines[id_line] = [opcode,number]
+                    self.lines[id_line] = [opcode,number,comment]
                     id_line += 1
                 
                 elif (content == "RET") or  (content == "NOP"):
                     if self.Isbin:
-                        self.lines[id_line] = [self.opcodes[content] ,"0"]
+                        self.lines[id_line] = [self.opcodes[content] ,"0", comment]
                     else:
-                        self.lines[id_line] = [content ,"0"]
+                        self.lines[id_line] = [content ,"0", comment]
                     id_line += 1
     
     def Bynarization(self):
         BinaryFormat = lambda x, n: format(x, 'b').zfill(n)
         if self.Isbin:
-            self.lines = {key: [BinaryFormat(int(value[0]),4),BinaryFormat(int(value[1]),9)] for key, value in self.lines.items()}
+            self.lines = {key: [BinaryFormat(int(value[0]),4),BinaryFormat(int(value[1]),9),value[2]] for key, value in self.lines.items()}
         else:
-            self.lines = {key: [value[0],BinaryFormat(int(value[1]),9)] for key, value in self.lines.items()}
+            self.lines = {key: [value[0],BinaryFormat(int(value[1]),9),value[2]] for key, value in self.lines.items()}
     def convert(self):
         id_line = 0
         writing = True
@@ -124,9 +128,9 @@ class Assembler:
             while writing:
                 try:
                     if self.Isbin:
-                        archive.write(f"tmp({id_line})  := \"{self.lines[id_line][0]}{self.lines[id_line][1]}\";\n")
+                        archive.write(f"tmp({id_line})  := \"{self.lines[id_line][0]}{self.lines[id_line][1]}\"; {self.lines[id_line][2]} \n")
                     else:
-                        archive.write(f"tmp({id_line})  := {self.lines[id_line][0]} & \"{self.lines[id_line][1]}\";\n")
+                        archive.write(f"tmp({id_line})  := {self.lines[id_line][0]} & \"{self.lines[id_line][1]}\"; {self.lines[id_line][2]} \n")
                     id_line += 1
                 except:
                     writing = False

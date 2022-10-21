@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Contador/output_files/") File("TopLevel.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/output_files/") File("TopLevel.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
