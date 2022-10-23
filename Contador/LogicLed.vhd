@@ -3,22 +3,25 @@ use ieee.std_logic_1164.all;
 
 entity LogicLed is 
   port ( 
-			CLK: in std_logic;
-			WR: in std_logic;
-			Data_out: in std_logic_vector(7 downto 0);
-			Data_address: in std_logic_vector(8 downto 0);
-			Led_8: out std_logic;
-			Led_9: out std_logic;
-			LedR: out std_logic_vector(7 downto 0)
+			-- entrada da logica dos leds
+			CLK:			in std_logic;
+			WR: 			in std_logic;
+			Data_out: 		in std_logic_vector(7 downto 0);
+			Data_address:	in std_logic_vector(8 downto 0);
 			
+			-- saida da logica dos leds
+			Led_8: 			out std_logic;
+			Led_9: 			out std_logic;
+			LedR: 			out std_logic_vector(7 downto 0)
+					
 			
   );
   end entity;
   
   architecture logic of LogicLed is
   
-  signal decoderBloco:  std_logic_vector(7 downto 0);
-  signal decoderEndereco:  std_logic_vector(7 downto 0);
+  signal decoderBloco		:  std_logic_vector(7 downto 0);
+  signal decoderEndereco	:  std_logic_vector(7 downto 0);
   
   
   
@@ -43,6 +46,7 @@ entity LogicLed is
 		port map (
 						DIN => Data_out(0),
 						DOUT => Led_9,
+						-- enable com base no enderecamento
 						ENABLE => (WR and decoderBloco(4) and decoderEndereco(2) and not(Data_address(5)) ),
 						CLK => CLK,
 						RST => '0'
@@ -55,6 +59,7 @@ entity LogicLed is
 		port map (
 						DIN => Data_out(0),
 						DOUT => Led_8,
+						-- enable com base no enderecamento
 						ENABLE => (WR and decoderBloco(4) and decoderEndereco(1) and not(Data_address(5)) ),
 						CLK => CLK,
 						RST => '0'
@@ -67,15 +72,12 @@ entity LogicLed is
 		port map (
 						DIN => Data_out,
 						DOUT => LedR,
-						ENABLE => (WR and decoderBloco(4) and decoderEndereco(0) and not(Data_address(5)) ),
+						-- enable com base no enderecamento
+						ENABLE => (WR and decoderBloco(4) and decoderEndereco(0) and not(Data_address(5))),
 						CLK => CLK,
 						RST => '0'
 				
 				
 				);
-  
-  
- 
-  
   
 end architecture;

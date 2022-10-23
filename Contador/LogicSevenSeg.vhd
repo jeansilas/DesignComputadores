@@ -3,17 +3,18 @@ use ieee.std_logic_1164.all;
 
 entity LogicSevenSeg is 
   port ( 
-			CLK: in std_logic;
-			WR: in std_logic;
-			Data_out: in std_logic_vector(7 downto 0);
-			Data_address: in std_logic_vector(8 downto 0);
-			
-			Hex0: out std_logic_vector(6 downto 0);
-		   Hex1: out std_logic_vector(6 downto 0);
-		   Hex2: out std_logic_vector(6 downto 0);
-		   Hex3: out std_logic_vector(6 downto 0);
-		   Hex4: out std_logic_vector(6 downto 0);
-		   Hex5: out std_logic_vector(6 downto 0)
+			-- entradas da logica do sevenseg
+			CLK				: in std_logic;
+			WR				: in std_logic;
+			Data_out		: in std_logic_vector(7 downto 0);
+			Data_address	: in std_logic_vector(8 downto 0);
+			-- saidas da logica do sevenseg
+			Hex0			: out std_logic_vector(6 downto 0);
+		   	Hex1			: out std_logic_vector(6 downto 0);
+		   	Hex2			: out std_logic_vector(6 downto 0);
+		   	Hex3			: out std_logic_vector(6 downto 0);
+		   	Hex4			: out std_logic_vector(6 downto 0);
+		   	Hex5			: out std_logic_vector(6 downto 0)
 		  
 			
 			

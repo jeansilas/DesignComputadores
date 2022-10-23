@@ -3,10 +3,14 @@ use ieee.std_logic_1164.all;
 
 entity logicaDesvio is
 
-port (   controle   : in std_logic_vector(12 downto 0);
-         flag_zero  : in std_logic;
-			saida     : out std_logic_vector(1 downto 0);
-			flag_less  : in std_logic
+port (   
+      -- entradas da lógica de desvio
+      controle    : in std_logic_vector(12 downto 0);
+      flag_zero   : in std_logic;
+
+      -- saidas da logica de desvio
+			saida       : out std_logic_vector(1 downto 0);
+			flag_less   : in std_logic
   );
  
 end entity;
