@@ -1,33 +1,34 @@
-Quartus Prime Archive log --	C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/TopLevel.qarlog
+Quartus Prime Archive log --	C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.qarlog
 
-Archive:	C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/TopLevel.qar
-Date:		Tue Oct 11 12:21:55 2022
+Archive:	C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.qar
+Date:		Sun Oct 23 21:14:42 2022
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/LogicKeySwitch.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/LogicLed.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/LogicSevenSeg.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/Processador.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/TopLevel.qpf
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/TopLevel.qsf
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/TopLevel.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/ULASomaSub.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/buffer_3_state_8portas.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/conversorHex7Seg.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/decoder3x8.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/decoderInstru.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/edgeDetector.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/flipflop.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/logicaDesvio.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/memoriaRAM.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/memoriaROM.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/muxGenerico2x1.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/muxGenerico4x1.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/registradorGenerico.vhd
-C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/Aula8e/somaConstante.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicKeySwitch.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicLed.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/LogicSevenSeg.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Processador.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.qpf
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.qsf
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/TopLevel.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/ULASomaSub.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/Waveform.vwf
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/buffer_3_state_8portas.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/conversorHex7Seg.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/decoder3x8.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/decoderInstru.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/edgeDetector.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/flipflop.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/logicaDesvio.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/memoriaRAM.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/memoriaROM.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico2x1.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/muxGenerico4x1.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/registradorGenerico.vhd
+C:/Users/jeans/Desktop/Insper/6Semestre/DesComp/DesignComputadores/Contador/somaConstante.vhd
 c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
-	======= Total: 22 files to archive =======
+	======= Total: 23 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
