@@ -17,20 +17,22 @@ end entity;
 
 architecture assincrona of memoriaROM is
 
-  constant NOP  : std_logic_vector(3 downto 0)   := "0000";
-  constant LDA  : std_logic_vector(3 downto 0)   := "0001";
-  constant SOMA : std_logic_vector(3 downto 0)   := "0010";
-  constant SUB  : std_logic_vector(3 downto 0)   := "0011";
-  constant LDI  : std_logic_vector(3 downto 0)   := "0100";
-  constant STA  : std_logic_vector(3 downto 0)   := "0101";
-  constant JMP	 : std_logic_vector(3 downto 0)   := "0110";
-  constant JEQ  : std_logic_vector(3 downto 0)   := "0111";
-  constant CEQ  : std_logic_vector(3 downto 0)   := "1000";
-  constant JSR  : std_logic_vector(3 downto 0)   := "1001";
-  constant RET  : std_logic_vector(3 downto 0)   := "1010";
-  constant ANDOP  : std_logic_vector(3 downto 0) := "1011";
-  constant CLT 	: std_logic_vector(3 downto 0) := "1100";
-  constant JLT  : std_logic_vector(3 downto 0)   := "1101";
+  constant NOP    : std_logic_vector(3 downto 0)    := "0000";
+  constant LDA    : std_logic_vector(3 downto 0)    := "0001";
+  constant SOMA   : std_logic_vector(3 downto 0)    := "0010";
+  constant SUB    : std_logic_vector(3 downto 0)    := "0011";
+  constant LDI    : std_logic_vector(3 downto 0)    := "0100";
+  constant STA    : std_logic_vector(3 downto 0)    := "0101";
+  constant JMP	   : std_logic_vector(3 downto 0)    := "0110";
+  constant JEQ    : std_logic_vector(3 downto 0)    := "0111";
+  constant CEQ    : std_logic_vector(3 downto 0)    := "1000";
+  constant JSR    : std_logic_vector(3 downto 0)    := "1001";
+  constant RET    : std_logic_vector(3 downto 0)    := "1010";
+  constant ANDOP  : std_logic_vector(3 downto 0)    := "1011";
+  constant CLT 	: std_logic_vector(3 downto 0)    := "1100";
+  constant JLT    : std_logic_vector(3 downto 0)    := "1101";
+  constant ADDI   : std_logic_vector(3 downto 0)    := "1110";
+  constant SUBI   : std_logic_vector(3 downto 0)    := "1111";
   
   -- Registradores
   

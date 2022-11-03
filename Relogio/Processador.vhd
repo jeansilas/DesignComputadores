@@ -47,25 +47,25 @@ architecture arquitetura of Processador is
   signal end_ret: std_logic_vector( 8 downto 0);
   
   
-  alias opcode: std_logic_vector(3 downto 0) is instruction(12 downto 9); 
-  alias controle: std_logic_vector(12 downto 0) is DECODER_saida;
-  alias MUX1: std_logic_vector(7 downto 0) is instruction(7 downto 0);
-  alias ULA_A: std_logic_vector(7 downto 0) is REGS_saida(larguraDados-1 downto 0);
-  alias ULA_B: std_logic_vector(7 downto 0) is MUX_saida(larguraDados-1 downto 0);
-  alias SelULA: std_logic_vector(1 downto 0) is controle(4 downto 3);
-  alias SelMUX: std_logic is controle(6);
-  alias REGS_entrada: std_logic_vector(7 downto 0) is ULA_saida;
+  alias opcode			: std_logic_vector(3 downto 0)  is instruction(12 downto 9); 
+  alias controle		: std_logic_vector(12 downto 0) is DECODER_saida;
+  alias MUX1			: std_logic_vector(7 downto 0)  is instruction(7 downto 0);
+  alias ULA_A			: std_logic_vector(7 downto 0)  is REGS_saida(larguraDados-1 downto 0);
+  alias ULA_B			: std_logic_vector(7 downto 0)  is MUX_saida(larguraDados-1 downto 0);
+  alias SelULA			: std_logic_vector(1 downto 0)  is controle(4 downto 3);
+  alias SelMUX			: std_logic is controle(6);
+  alias REGS_entrada	: std_logic_vector(7 downto 0) is ULA_saida;
   alias Habilita_REGS: std_logic is controle(5);
-  alias MEM_leitura: std_logic is controle(1);
-  alias MEM_escrita: std_logic is controle(0);
+  alias MEM_leitura	: std_logic is controle(1);
+  alias MEM_escrita	: std_logic is controle(0);
   
-  alias habilita_flag_zero: std_logic is controle(2);
-  alias habilita_flag_ret: std_logic is controle(11);
+  alias habilita_flag_zero	: std_logic is controle(2);
+  alias habilita_flag_ret	: std_logic is controle(11);
   alias habilita_flag_less	: std_logic is controle(12);
-  alias JMP_controle: std_logic is controle(10);
-  alias JEQ_controle: std_logic is controle(7);
-  alias JST_controle: std_logic is controle(12);
-  alias endereco_REG: std_logic_vector is instruction(15 downto 13);
+  alias JMP_controle			: std_logic is controle(10);
+  alias JEQ_controle			: std_logic is controle(7);
+  alias JST_controle			: std_logic is controle(12);
+  alias endereco_REG			: std_logic_vector is instruction(15 downto 13);
   
   
 
