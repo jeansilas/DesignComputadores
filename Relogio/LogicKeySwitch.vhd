@@ -27,6 +27,8 @@ entity LogicKeySwitch is
   signal tempo_edge: std_logic;
   signal Key1_signal: std_logic;
   signal Key1_edge: std_logic;
+  signal Key2_signal: std_logic;
+  signal Key2_edge: std_logic;
   signal tempo: std_logic;
   
   
@@ -88,11 +90,52 @@ entity LogicKeySwitch is
   
 					  port map  (
 					  
-										entrada  => "0000000" & not(Key(2)),
+										entrada  => "0000000" & Key2_signal,
 										habilita => (RD and Data_address(5) and decoderEndereco(2) and decoderBloco(5)),
 										saida    => Data_in
 					  
 					  );
+					  
+					  
+  	EdgeDetector2_item: entity work.edgeDetector(bordaSubida)
+	
+					port map (
+									CLK => CLOCK_50,
+									entrada => not(Key(2)),
+									saida => Key2_edge
+									
+					
+					
+					);
+					
+	
+	
+	
+	Debouncer_Key2_item : entity work.flipflop
+	
+					port map (
+					
+									 DIN => '1',
+									 DOUT => Key2_signal,
+									 ENABLE => '1',
+									 CLK => Key2_edge, 
+									 RST => (
+									 WR 				 and
+									 Data_Address(0) and
+									 not(Data_Address(1)) and
+									 Data_Address(2) and
+									 Data_Address(3) and
+									 Data_Address(4) and
+									 Data_Address(5) and
+									 Data_Address(6) and
+									 Data_Address(7) and
+									 Data_Address(8)
+									 )
+					
+					
+					);
+	
+  
 					  
 	EdgeDetector1_item: entity work.edgeDetector(bordaSubida)
 	
