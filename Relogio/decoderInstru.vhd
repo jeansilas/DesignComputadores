@@ -9,20 +9,23 @@ end entity;
 
 architecture comportamento of decoderInstru is
 
-  constant NOP  : std_logic_vector(3 downto 0)   := "0000";
-  constant LDA  : std_logic_vector(3 downto 0)   := "0001";
-  constant SOMA : std_logic_vector(3 downto 0)   := "0010";
-  constant SUB  : std_logic_vector(3 downto 0)   := "0011";
-  constant LDI  : std_logic_vector(3 downto 0)   := "0100";
-  constant STA  : std_logic_vector(3 downto 0)   := "0101";
-  constant JMP  : std_logic_vector(3 downto 0)   := "0110";
-  constant JEQ  : std_logic_vector(3 downto 0)   := "0111";
-  constant CEQ  : std_logic_vector(3 downto 0)   := "1000";
-  constant JSR  : std_logic_vector(3 downto 0)   := "1001";
-  constant RET  : std_logic_vector(3 downto 0)   := "1010";
-  constant ANDOP  : std_logic_vector(3 downto 0) := "1011";
-  constant CLT 	: std_logic_vector(3 downto 0) := "1100";
-  constant JLT  : std_logic_vector(3 downto 0)   := "1101";
+  constant NOP    : std_logic_vector(3 downto 0)   := "0000";
+  constant LDA    : std_logic_vector(3 downto 0)   := "0001";
+  constant SOMA   : std_logic_vector(3 downto 0)   := "0010";
+  constant SUB    : std_logic_vector(3 downto 0)   := "0011";
+  constant LDI    : std_logic_vector(3 downto 0)   := "0100";
+  constant STA    : std_logic_vector(3 downto 0)   := "0101";
+  constant JMP    : std_logic_vector(3 downto 0)   := "0110";
+  constant JEQ    : std_logic_vector(3 downto 0)   := "0111";
+  constant CEQ    : std_logic_vector(3 downto 0)   := "1000";
+  constant JSR    : std_logic_vector(3 downto 0)   := "1001";
+  constant RET    : std_logic_vector(3 downto 0)   := "1010";
+  constant ANDOP  : std_logic_vector(3 downto 0)   := "1011";
+  constant CLT 	: std_logic_vector(3 downto 0)   := "1100";
+  constant JLT    : std_logic_vector(3 downto 0)   := "1101";
+  constant ADDI   : std_logic_vector(3 downto 0)   := "1110";
+  constant ANDI   : std_logic_vector(3 downto 0)   := "1111";
+  
   
 
   begin
@@ -40,6 +43,8 @@ saida <= "0000000000000" when opcode = NOP  	else
 		   "0001000000000" when opcode = RET  	else
 			"1000000000010" when opcode = CLT  	else -- ultimo bit é de habilita less
 			"1000000000000" when opcode = JLT   else
+			"0000001101000" when opcode = ADDI  else
+			"0000001111000" when opcode = ANDI  else 
 			"0000000000000";  -- NOP para os opcodes Indefinidos
 
 end architecture;
