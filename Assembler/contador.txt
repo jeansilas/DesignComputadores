@@ -1,0 +1,495 @@
+JSR @INICIALIZACAO
+JMP @INICIO
+
+*
+% INICIALIZACAO
+INICIALIZACAO :
+
+LDI $0	 
+STA @511    # Reseta o KEY0
+STA @510    # Reseta o KEY 1
+
+LDI $0	        
+STA @0	   # Constante 0
+
+LDI $1	       
+STA @1	   # Constante 1
+
+LDI $10
+STA @10	   # Constante 10
+
+LDI $9
+STA @9	   # Constante 9
+
+LDI $15    # Constante 15 : Mascara para SW
+STA @11
+
+
+LDA @0      #Carrega o acumulador com o valor 0
+
+STA @288    # Limpa HEX0
+STA @289    # Limpa HEX1
+STA @290    # Limpa HEX2
+STA @291    # Limpa HEX3
+STA @292    # Limpa HEX4
+STA @293    # Limpa HEX5
+
+STA @256    # Limpa LEDR0~LEDR7
+STA @257    # Limpa LEDR8
+STA @258    # Limpa LEDR9
+
+STA @2      # Inicializa o Valor das unidades
+STA @3      # Inicializa o Valor das dezenas
+STA @4      # Inicializa o Valor das centenas
+STA @5      # Inicializa o Valor das unidade de milhares
+STA @6      # Inicializa o Valor das dezenas de milhares
+STA @7      # Inicializa o Valor das centenas de milhares
+
+LDI $10
+STA @13      # Limite para o Valor das unidades
+STA @14      # Limite para o Valor das dezenas
+STA @15      # Limite para o Valor das centenas
+STA @16      # Limite para o Valor das unidade de milhares
+STA @17      # Limite para o Valor das dezenas de milhares
+STA @18      # Limite para o Valor das centenas de milhares
+
+LDI $0
+
+STA @8       # Limpa a Flag de limite
+STA @12      # Limpa a Flag de Overflow(carry_out)
+
+RET
+*
+% LOOP_INICIO
+INICIO :
+LDA @352	#Carrega o acumulador com a leitura do botão KEY0
+ANDOP @1
+CEQ @1      # Compara a leitura de KEY0 com a constante 1 MEM[1]
+JEQ @INCREMENTA_CONTADOR_CHECKPOINT
+INCREMENTA_CONTADOR_RET :
+
+JSR @ESCREVE_DISPLAY
+
+LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+ANDOP @1    # Aplica mascara
+CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LIMITE_INCREMENTO_CHECKPOINT
+LIMITE_INCREMENTO_RET :
+
+JSR @VERIFICA_LIMITE
+
+
+LDA @356	#Carrega o acumulador com a leitura do botão FPGA_RESET
+ANDOP @1    # Aplica mascara
+CEQ @1      # Compara a leitura de FPGA_RESET com a constante 1 MEM[1]
+JEQ @REINICIA_CONTADOR_CHECKPOINT
+REINICIA_CONTADOR_RET :
+
+JMP @INICIO
+
+INCREMENTA_CONTADOR_CHECKPOINT:
+JSR @INCREMENTA_CONTADOR
+JMP @INCREMENTA_CONTADOR_RET
+
+REINICIA_CONTADOR_CHECKPOINT:
+JSR @REINICIA_CONTADOR
+JMP @REINICIA_CONTADOR_RET
+
+LIMITE_INCREMENTO_CHECKPOINT:
+JSR @LIMITE_INCREMENTO
+JMP @LIMITE_INCREMENTO_RET
+
+*
+% INCREMENTA_CONTADOR
+INCREMENTA_CONTADOR :
+
+STA @511 
+
+LDA @12
+CEQ @1
+JEQ @RET_INCREMENTA      # Verifica o carry_out
+
+LDA @8
+CEQ @1
+JEQ @RET_INCREMENTA      # Verifica o carry_out
+
+LDA @2
+SOMA @1
+
+CEQ @10
+JEQ @DEZENAS # Verifica as unidades
+STA @2
+JMP @RET_INCREMENTA
+
+DEZENAS :
+
+LDI $0
+STA @2
+
+
+LDA @3
+SOMA @1
+
+CEQ @10
+JEQ @CENTENAS # Verifica as dezenas
+STA @3
+JMP @RET_INCREMENTA
+
+CENTENAS :
+
+LDI $0
+STA @3
+
+
+LDA @4
+SOMA @1
+
+CEQ @10
+JEQ @U_MILHARES # Verifica as centenas
+STA @4
+JMP @RET_INCREMENTA
+
+U_MILHARES :
+
+LDI $0
+STA @4
+
+
+LDA @5
+SOMA @1
+
+CEQ @10
+JEQ @D_MILHARES # Verifica as Unidade de Milhares
+STA @5
+JMP @RET_INCREMENTA
+
+D_MILHARES :
+
+LDI $0
+STA @5
+
+
+LDA @6
+SOMA @1
+
+CEQ @10
+JEQ @C_MILHARES # Verifica as dezenas de Milhares
+STA @6
+JMP @RET_INCREMENTA
+
+C_MILHARES :
+
+LDI $0
+STA @6
+
+
+LDA @7
+SOMA @1
+
+CEQ @10
+JEQ @LED_OVERFLOW # Verifica as centenas de Milhares
+STA @7
+JMP @RET_INCREMENTA
+
+LED_OVERFLOW :
+
+
+LDI $1
+STA @258        # Ativa o LED de OVERLFOW
+STA @12         # Ativa a Flag de OVERFLOW
+LDI $9          
+STA @2          # Mantem os valore das unidades em 9
+STA @3          # Mantem os valore das dezenas em 9
+STA @4          # Mantem os valore das centenas em 9
+STA @5          # Mantem os valore das unidades de milhares em 9
+STA @6          # Mantem os valore das dezenas de milhares em 9
+STA @7          # Mantem os valore das centenas de milhares em 9
+
+
+RET_INCREMENTA :
+RET
+
+*
+% ESCREVE_DISPLAY
+ESCREVE_DISPLAY :
+
+LDA @2
+STA @288        # Escreve o valor das unidades
+LDA @3
+STA @289        # Escreve o valor das dezenas
+LDA @4
+STA @290        # Escreve o valor das centenas
+LDA @5
+STA @291        # Escreve o valor das unidades de milhares
+LDA @6
+STA @292        # Escreve o valor das dezenas de milhares
+LDA @7
+STA @293        # Escreve o valor das centenas de milhares
+
+RET
+*
+% REINICIA_CONTADOR
+REINICIA_CONTADOR :
+
+LDI $0
+
+STA @2      # Reinicia o Valor das unidades
+STA @3      # Reinicia o Valor das dezenas
+STA @4      # Reinicia o Valor das centenas
+STA @5      # Reinicia o Valor das unidade de milhares
+STA @6      # Reinicia o Valor das dezenas de milhares
+STA @7      # Reinicia o Valor das centenas de milhares
+
+STA @8      # Reinicia a Flag de Limite
+STA @12     # Reinicia a Falg de Overflow(carry_out)
+
+STA @257    # Apaga o Led de Limite
+STA @258    # Apaga o Led de Overflow
+
+RET
+*
+% VERIFICA_LIMITE
+VERIFICA_LIMITE :
+
+LDA @2
+CLT @13
+JLT @RET_VERIFICA   # Verifica as unidades
+LDA @3
+CLT @14
+JLT @RET_VERIFICA   # Verifica as dezenas
+LDA @4
+CLT @15
+JLT @RET_VERIFICA   # Verifica as centenas
+LDA @5
+CLT @16
+JLT @RET_VERIFICA   # Verifica as unidades de milhares
+LDA @6
+CLT @17
+JLT @RET_VERIFICA   # Verifica as dezenas de milhares
+LDA @7
+CLT @18
+JLT @RET_VERIFICA   # Verifica as centenas de milhares
+
+LDI $1
+STA @8          # Flag de Limite
+STA @257        # LED de Limite
+
+RET_VERIFICA :
+
+RET
+*
+% LIMITE_INCREMENTO
+LIMITE_INCREMENTO:
+
+STA @510 	# Limpa a leitura do KEY1
+LDI $1
+STA @256    # Liga o LEDR0
+
+LEDR0 :
+LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+ANDOP @1    # Aplica mascara
+CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR0_END
+
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMH_0
+LDI $9
+STA @288
+LIMH_0:
+STA @288
+JMP @LEDR0
+LEDR0_END:
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMS_0
+LDI $9
+STA @13     # Guarda o Limite das unidades
+LIMS_0:
+STA @13
+
+
+
+*
+
+
+STA @510 	# Limpa a leitura do KEY1
+LDI $2
+STA @256    # Liga o LEDR1
+
+LEDR1 :
+LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+ANDOP @1    # Aplica mascara
+CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR1_END
+
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMH_1
+LDI $9
+STA @289
+LIMH_1:
+STA @289
+JMP @LEDR1
+LEDR1_END:
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMS_1
+LDI $9
+STA @14     # Guarda o Limite das dezenas
+LIMS_1:
+STA @14
+
+
+
+*
+
+
+STA @510 	# Limpa a leitura do KEY1
+LDI $4
+STA @256    # Liga o LEDR2
+
+LEDR2 :
+LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+ANDOP @1    # Aplica mascara
+CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR2_END
+
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMH_2
+LDI $9
+STA @290
+LIMH_2:
+STA @290
+JMP @LEDR2
+LEDR2_END:
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMS_2
+LDI $9
+STA @15     # Guarda o Limite das centenas
+LIMS_2:
+STA @15
+
+
+*
+
+
+STA @510 	# Limpa a leitura do KEY1
+LDI $8
+STA @256    # Liga o LEDR3
+
+LEDR3 :
+LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+ANDOP @1    # Aplica mascara
+CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR3_END
+
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMH_3
+LDI $9
+STA @291
+LIMH_3:
+STA @291
+JMP @LEDR3
+LEDR3_END:
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMS_3
+LDI $9
+STA @16     # Guarda o Limite das unidade de milhares
+LIMS_3:
+STA @16
+
+
+*
+
+
+STA @510 	# Limpa a leitura do KEY1
+LDI $16
+STA @256    # Liga o LEDR4
+
+LEDR4 :
+LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+ANDOP @1    # Aplica mascara
+CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR4_END
+
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMH_4
+LDI $9
+STA @292
+LIMH_4:
+STA @292
+JMP @LEDR4
+LEDR4_END:
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMS_4
+LDI $9
+STA @17     # Guarda o Limite das dezenas de milhares
+LIMS_4:
+STA @17
+
+
+*
+
+
+STA @510 	# Limpa a leitura do KEY1
+LDI $32
+STA @256    # Liga o LEDR5
+
+LEDR5 :
+LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+ANDOP @1    # Aplica mascara
+CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR5_END
+
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMH_5
+LDI $9
+STA @293
+LIMH_5:
+STA @293
+JMP @LEDR5
+LEDR5_END:
+LDA @320    # Leitura SW
+ANDOP @11   # Aplica mascara SW0~SW3
+CLT  @10
+JLT @LIMS_5
+LDI $9
+STA @18     # Guarda o Limite das centenas de milhares
+LIMS_5:
+STA @18
+
+*
+
+
+LDI $0
+STA @288    # Limpa o HEX0
+STA @289    # Limpa o HEX1
+STA @289    # Limpa o HEX2
+STA @290    # Limpa o HEX3
+STA @291    # Limpa o HEX4
+STA @256    # Limpa o HEX5
+STA @510 	# Limpa a leitura do KEY1
+
+
+
+RET
+

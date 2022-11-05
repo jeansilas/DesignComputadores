@@ -1,0 +1,37 @@
+{
+    "Opcodes" : {
+                    "NOP"      :  "0",
+                    "LDA"      :  "1",
+                    "SOMA"     :  "2",
+                    "SUB"      :  "3",
+                    "LDI"      :  "4",
+                    "STA"      :  "5",
+                    "JMP"      :  "6",
+                    "JEQ"      :  "7",
+                    "CEQ"      :  "8",
+                    "JSR"      :  "9",
+                    "RET"      :  "10",
+                    "ANDOP"    :  "11",
+                    "CLT"      :  "12",
+                    "JLT"      :  "13",
+                    "ADDI"     :  "14",
+                    "ANDI"     :  "15"
+
+                },
+    
+    "StopOpcodes": ["@","$"],
+
+    "Registers": {
+
+                    "RUS" : "000",
+                    "RDS" : "001",
+                    "RUM" : "010",
+                    "RDM" : "011",
+                    "RUH" : "100",
+                    "RMH" : "101",
+                    "RCA" : "110",
+                    "RCZ" : "111"
+    },
+
+    "stopRegisters": ","
+}

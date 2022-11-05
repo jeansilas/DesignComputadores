@@ -24,7 +24,7 @@ architecture comportamento of decoderInstru is
   constant CLT 	: std_logic_vector(3 downto 0)   := "1100";
   constant JLT    : std_logic_vector(3 downto 0)   := "1101";
   constant ADDI   : std_logic_vector(3 downto 0)   := "1110";
-  constant SUBI   : std_logic_vector(3 downto 0)   := "1111";
+  constant ANDI   : std_logic_vector(3 downto 0)   := "1111";
   
   
 
