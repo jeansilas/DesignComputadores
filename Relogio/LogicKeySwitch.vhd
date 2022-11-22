@@ -29,19 +29,21 @@ entity LogicKeySwitch is
   signal Key1_edge: std_logic;
   signal Key2_signal: std_logic;
   signal Key2_edge: std_logic;
+  signal Key3_signal: std_logic;
+  signal Key3_edge: std_logic;
   signal tempo: std_logic;
+  signal temporeal: std_logic;
+  signal tempoacelerado: std_logic;
   
+  signal reset_key0: std_logic;
+  signal reset_key1: std_logic;
+  signal reset_key2: std_logic;
+  signal reset_key3: std_logic;
   
   
   begin
   
-  
-  
- interfaceBaseTempo_item : entity work.divisorGenerico_e_Interface
-              port map (clk => CLOCK_50,
-              habilitaLeitura => RD and Data_address(5) and decoderEndereco(0) and decoderBloco(5),
-              limpaLeitura => (
-									 WR 				 and
+  reset_key0 <=			    WR 				  and
 									 Data_Address(0) and
 									 Data_Address(1) and
 									 Data_Address(2) and
@@ -50,8 +52,64 @@ entity LogicKeySwitch is
 									 Data_Address(5) and
 									 Data_Address(6) and
 									 Data_Address(7) and
-									 Data_Address(8) ),
-              leituraUmSegundo => tempo);
+									 Data_Address(8);
+  reset_key1 <= 
+									 WR 				  and
+									 not(Data_Address(0)) and
+									 Data_Address(1) and
+									 Data_Address(2) and
+									 Data_Address(3) and
+									 Data_Address(4) and
+									 Data_Address(5) and
+									 Data_Address(6) and
+									 Data_Address(7) and
+									 Data_Address(8);
+  
+  
+  reset_key2 <= 				 WR 				 and
+									 Data_Address(0) and
+									 not(Data_Address(1)) and
+									 Data_Address(2) and
+									 Data_Address(3) and
+									 Data_Address(4) and
+									 Data_Address(5) and
+									 Data_Address(6) and
+									 Data_Address(7) and
+									 Data_Address(8);
+									 
+  reset_key3 <= 				 WR 				 and
+									 not(Data_Address(0)) and
+									 not(Data_Address(1)) and
+									 Data_Address(2) and
+									 Data_Address(3) and
+									 Data_Address(4) and
+									 Data_Address(5) and
+									 Data_Address(6) and
+									 Data_Address(7) and
+									 Data_Address(8);
+									 
+  
+  
+  
+ interfaceBaseTempo_normal : entity work.divisorGenerico generic map (divisor => 25000000) 
+              port map (clk => CLOCK_50,
+              saida_clk => temporeal);
+				  
+				  
+ interfaceBaseTempo_acelerado : entity work.divisorGenerico generic map (divisor => 12500) 
+              port map (clk => CLOCK_50,
+              saida_clk => tempoacelerado);
+				  
+ MUX_tempo: entity work.muxGenerico2x1 generic map (larguraDados => 1)
+ 
+				 port map (
+				 
+								entradaA_MUX(0) => temporeal,
+								entradaB_MUX(0) => tempoacelerado,
+								seletor_MUX => not key(3),
+								saida_MUX(0) => tempo
+				 
+				 );
   
   DecoderBloco_item: entity work.decoder3x8
 
@@ -85,6 +143,34 @@ entity LogicKeySwitch is
 										saida    => Data_in
 					  
 					  );
+					  
+					  
+  EdgeDetector3_item: entity work.edgeDetector(bordaSubida)
+	
+					port map (
+									CLK => CLOCK_50,
+									entrada => not(Key(3)),
+									saida => Key3_edge
+									
+					
+					
+					);
+					
+	
+	
+	
+	Debouncer_Key3_item : entity work.flipflop
+	
+					port map (
+					
+									 DIN => '1',
+									 DOUT => Key3_signal,
+									 ENABLE => '1',
+									 CLK => Key3_edge, 
+									 RST => reset_key3
+					
+					
+					);
 	
 	Key2_item: entity work.buffer_3_state_8portas
   
@@ -119,18 +205,7 @@ entity LogicKeySwitch is
 									 DOUT => Key2_signal,
 									 ENABLE => '1',
 									 CLK => Key2_edge, 
-									 RST => (
-									 WR 				 and
-									 Data_Address(0) and
-									 not(Data_Address(1)) and
-									 Data_Address(2) and
-									 Data_Address(3) and
-									 Data_Address(4) and
-									 Data_Address(5) and
-									 Data_Address(6) and
-									 Data_Address(7) and
-									 Data_Address(8)
-									 )
+									 RST => reset_key2
 					
 					
 					);
@@ -159,21 +234,10 @@ entity LogicKeySwitch is
 									 DOUT => Key1_signal,
 									 ENABLE => '1',
 									 CLK => Key1_edge, 
-									 RST => (
-									 WR 				 and
-									 not(Data_Address(0)) and
-									 Data_Address(1) and
-									 Data_Address(2) and
-									 Data_Address(3) and
-									 Data_Address(4) and
-									 Data_Address(5) and
-									 Data_Address(6) and
-									 Data_Address(7) and
-									 Data_Address(8)
-									 )
+									 RST => reset_key1
+									 );
 					
 					
-					);
 	
 	Key1_item: entity work.buffer_3_state_8portas
   
@@ -206,21 +270,11 @@ entity LogicKeySwitch is
 									 DOUT => tempo_signal,
 									 ENABLE => '1',
 									 CLK => tempo_edge, 
-									 RST => (
-									 WR 				 and
-									 Data_Address(0) and
-									 Data_Address(1) and
-									 Data_Address(2) and
-									 Data_Address(3) and
-									 Data_Address(4) and
-									 Data_Address(5) and
-									 Data_Address(6) and
-									 Data_Address(7) and
-									 Data_Address(8)
-									 )
+									 RST => reset_key0
+									 );
 					
 					
-					);
+					
 	
 	Key0_item: entity work.buffer_3_state_8portas
   

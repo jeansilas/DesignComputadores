@@ -1,0 +1,643 @@
+JSR @INICIALIZACAO
+JMP @INICIO
+
+*
+% INICIALIZACAO
+INICIALIZACAO :
+
+RCZ, LDI $0  # Registrador com zero
+
+RCZ, STA @511    # Reseta o KEY0
+RCZ, STA @510    # Reseta o KEY 1
+
+	        
+RCZ, STA @0	   # Constante 0
+
+RCA, LDI $1	       
+RCA, STA @1	   # Constante 1
+
+RCA, LDI $2    # Constante 2
+RCA, STA @2
+
+RCA, LDI $3    # Constante 3
+RCA, STA @3
+
+RCA, LDI $4    # Constante 4
+RCA, STA @4
+
+RCA, LDI $6   # Constante 6
+RCA, STA @6
+
+RCA, LDI $10
+RCA, STA @10	   # Constante 10
+
+RCA, LDI $9
+RCA, STA @9	   # Constante 9
+
+RCA, LDI $15    # Constante 15 : Mascara para SW
+RCA, STA @11
+
+
+RCZ, STA @288    # Limpa HEX0
+RCZ, STA @289    # Limpa HEX1
+RCZ, STA @290    # Limpa HEX2
+RCZ, STA @291    # Limpa HEX3
+RCZ, STA @292    # Limpa HEX4
+RCZ, STA @293    # Limpa HEX5
+
+RCZ, STA @256    # Limpa LEDR0~LEDR7
+RCZ, STA @257    # Limpa LEDR8
+RCZ, STA @258    # Limpa LEDR9
+
+RUS, LDI $0     # Inicializa o Valor das unidades de segundos
+RDS, LDI $0     # Inicializa o Valor das dezenas de segundos
+RUM, LDI $0     # Inicializa o Valor das unidades de minutos
+RDM, LDI $0     # Inicializa o Valor das dezenas de minutos
+RUH, LDI $0     # Inicializa o Valor das unidades de horas
+RDH, LDI $0     # Inicializa o Valor das dezenas de horas
+
+
+RCA, LDI $10   
+RCA, STA @13      # Limite para o Valor das unidades de segundos
+RCA, STA @14      # Limite para o Valor das dezenas de segundos
+RCA, STA @15      # Limite para o Valor das unidades de minutos
+RCA, STA @16      # Limite para o Valor das dezenas de minutos
+RCA, STA @17      # Limite para o Valor das unidades de horas
+RCA, STA @18      # Limite para o Valor das dezenas de horas
+
+RCZ, STA @8       # Limpa a Flag de limite
+RCZ, STA @12      # Limpa a Flag de Overflow(carry_out)
+
+RCZ, STA @27      # Inicializa o valor para lidar com formato de hora
+RCZ, STA @28      # Inicializa o valor para lidar com limite de 24 Horas
+RCZ, STA @29      # 1 -> ajusta horário; 0 -> Limite incremento
+
+RET
+*
+% LOOP_INICIO
+INICIO :
+RCA, LDA @352	#Carrega o acumulador com a leitura do botão KEY0
+RCA, ANDI $1
+RCA, CEQ @1      # Compara a leitura de KEY0 com a constante 1 MEM[1]
+JEQ @INCREMENTA_CONTADOR_CHECKPOINT
+INCREMENTA_CONTADOR_RET :
+
+JSR @ESCREVE_DISPLAY
+
+RCA, LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+RCA, ANDI $1    # Aplica mascara
+RCA, CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LIMITE_INCREMENTO_CHECKPOINT
+LIMITE_INCREMENTO_RET :
+
+JSR @VERIFICA_LIMITE
+
+
+RCA, LDA @356	#Carrega o acumulador com a leitura do botão FPGA_RESET
+RCA, ANDI @1    # Aplica mascara
+RCA, CEQ @1      # Compara a leitura de FPGA_RESET com a constante 1 MEM[1]
+JEQ @REINICIA_CONTADOR_CHECKPOINT
+REINICIA_CONTADOR_RET :
+
+RCA, LDA @354	#Carrega o acumulador com a leitura do botão KEY2
+RCA, ANDI $1    # Aplica mascara
+RCA, CEQ @1      # Compara a leitura de KEY2 com a constante 1 MEM[1]
+JEQ @HORARIO_CHECKPOINT
+HORARIO_RET :
+
+JMP @INICIO
+
+INCREMENTA_CONTADOR_CHECKPOINT:
+JSR @INCREMENTA_CONTADOR
+JMP @INCREMENTA_CONTADOR_RET
+
+REINICIA_CONTADOR_CHECKPOINT:
+JSR @REINICIA_CONTADOR
+JMP @REINICIA_CONTADOR_RET
+
+LIMITE_INCREMENTO_CHECKPOINT:
+JSR @LIMITE_INCREMENTO
+JMP @LIMITE_INCREMENTO_RET
+
+HORARIO_CHECKPOINT:
+RCA, LDI $1
+RCA, STA @29
+JSR @LIMITE_INCREMENTO
+JMP @HORARIO_RET
+
+*
+% INCREMENTA_CONTADOR
+INCREMENTA_CONTADOR :
+
+RCA, STA @511 
+
+RCA, LDA @8
+RCA, CEQ @1
+JEQ @ALARME      # Verifica o carry out (limite)
+JMP @APAGA
+
+ALARME:
+RCA, LDA @29
+RCA, CEQ @1
+JEQ @APAGA
+RCA, LDI $1
+RCA, STA @257    # Acende o Led de Limite (alarm)
+RCA, STA @29
+JMP @ACENDIDO
+APAGA:
+RCZ, STA @257    # Apaga o Led de limite (alarm)
+RCZ, STA @29
+
+ACENDIDO:
+RUS, ADDI $1
+
+
+
+RUS, CEQ @10
+JEQ @US # Verifica as unidades de segundos
+JMP @RET_INCREMENTA
+
+US :
+RUS, LDI $0
+
+
+RDS, ADDI $1
+
+RDS,CEQ @6
+JEQ @DS # Verifica as dezenas de segundos
+JMP @RET_INCREMENTA
+
+DS :
+RDS, LDI $0
+
+
+
+RUM,ADDi $1
+
+RUM,CEQ @10
+JEQ @UM # Verifica as unidades de minutos
+JMP @RET_INCREMENTA
+
+UM :
+RUM, LDI $0
+
+
+RDM, ADDi $1
+
+RDM,CEQ @6
+JEQ @DM # Verifica as dezenas de minutos
+JMP @RET_INCREMENTA
+
+DM :
+RDM, LDI $0
+
+
+RUH, ADDI $1
+
+RUH, CEQ @4
+JEQ @FM
+JMP @NR
+FM :
+RCA, LDA @27
+RCA, ADDI $1
+RCA, STA @27
+RCA, CEQ @3
+JEQ @LED_OVERFLOW
+
+
+NR:
+RUH, CEQ @10
+JEQ @UH # Verifica as unidades de horas
+JMP @RET_INCREMENTA
+
+UH :
+RUH, LDI $0
+
+
+RDH, ADDI $1
+
+RDH, CEQ @3
+JEQ @LED_OVERFLOW # Verifica  a dezena das horas
+JMP @RET_INCREMENTA
+
+
+LED_OVERFLOW :
+
+
+RCA, LDI $1
+RCA, STA @258        # Ativa o LED de OVERLFOW
+RCA, STA @12         # Ativa a Flag de OVERFLOW          
+RUS, LDI $0          # Mantem os valore das unidades de segundos em 9
+RDS, LDI $0          # Mantem os valore das dezenas de segundos 5
+RUM, LDI $0          # Mantem os valore das unidades de minutos em 9
+RDM, LDI $0          # Mantem os valore das dezenas de minutos em 5
+RUH, LDI $0          # Mantem os valore das unidades de horas em 3
+RDH, LDI $0          # Mantem os valore das dezenas em 2
+RCZ, STA @27
+
+
+RET_INCREMENTA :
+RET
+
+*
+% ESCREVE_DISPLAY
+ESCREVE_DISPLAY :
+
+RUS, STA @288        # Escreve o valor das unidades de segundos
+RDS, STA @289        # Escreve o valor das dezenas de segundos
+RUM, STA @290        # Escreve o valor das unidades de minutos
+RDM, STA @291        # Escreve o valor das dezenas de minutos
+RUH, STA @292        # Escreve o valor das unidades de horas
+RDH, STA @293        # Escreve o valor das dezenas de horas
+
+RET
+*
+% REINICIA_CONTADOR
+REINICIA_CONTADOR :
+
+
+RUS, LDI $0          # Reinicia os valores das unidades de segundos em 9
+RDS, LDI $0          # Renicia os valores das dezenas de segundos 5
+RUM, LDI $0          # Reinicia os valores das unidades de minutos em 9
+RDM, LDI $0          # Reinicia os valores das dezenas de minutos em 5
+RUH, LDI $0          # Reinicia os valores das unidades de horas em 3
+RDH, LDI $0          # Reinicia os valores das dezenas de horas em 2
+
+
+RCZ, STA @8      # Reinicia a Flag de Limite
+RCZ, STA @12     # Reinicia a Falg de Overflow(carry_out)
+
+RCZ, STA @257    # Apaga o Led de Limite
+RCZ, STA @258    # Apaga o Led de Overflow
+
+RCZ, STA @27     # Reinicia a contagem de formato 24
+
+RET
+*
+% VERIFICA_LIMITE
+VERIFICA_LIMITE :
+
+
+RUS, CLT @13
+JLT @RET_VERIFICA   # Verifica as unidades de segundos
+RDS, CLT @14
+JLT @RET_VERIFICA   # Verifica as dezenas de segundos
+RUM, CLT @15
+JLT @RET_VERIFICA   # Verifica as unidades de minutos
+RDM, CLT @16
+JLT @RET_VERIFICA   # Verifica as dezenas de minutos
+RUH, CLT @17
+JLT @RET_VERIFICA   # Verifica as unidades de horas
+RDH, CLT @18
+JLT @RET_VERIFICA   # Verifica as dezenas de hpras
+
+RCA, LDI $1
+RCA, STA @8          # Flag de Limite
+
+RET_VERIFICA :
+
+RET
+*
+% LIMITE_INCREMENTO
+LIMITE_INCREMENTO:
+
+RCZ, STA @288    # Limpa HEX0
+RCZ, STA @289    # Limpa HEX1
+RCZ, STA @290    # Limpa HEX2
+RCZ, STA @291    # Limpa HEX3
+RCZ, STA @292    # Limpa HEX4
+RCZ, STA @293    # Limpa HEX5
+*
+
+
+RCZ, STA @510 	# Limpa a leitura do KEY1
+RCA, LDI $32
+RCA, STA @256    # Liga o LEDR5
+
+LEDR5 :
+RCA, LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+RCA, ANDOP @1    # Aplica mascara
+RCA, CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR5_END
+
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, CLT  @3
+RCA, JLT @LIMH_5
+RCA, LDI $2
+LIMH_5:
+RCA, STA @293
+JMP @LEDR5
+
+LEDR5_END:
+RCA, LDA @29
+RCA, CEQ @1
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, STA @30
+RCA, CLT  @3
+RCA, JLT @LIMS_5
+RCA, LDI $1
+RCA, STA @28
+RCA, LDI $2     # Guarda o Limite das dezenas de horas
+RCA, STA @30
+LIMS_5:
+JEQ @LEITURA5
+RCA, STA @18
+JMP @END5
+LEITURA5:
+RDH, LDA @30
+END5:
+
+
+
+*
+
+
+RCZ, STA @510 	# Limpa a leitura do KEY1
+RCA, LDI $16
+RCA, STA @256    # Liga o LEDR4
+
+LEDR4 :
+RCA, LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+RCA, ANDOP @1    # Aplica mascara
+RCA, CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR4_END
+
+
+RCA, LDA @28
+CEQ @1
+JEQ @FHH
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, CLT  @10
+RCA, JLT @BUG_FIXED2
+RCA, LDI $9
+BUG_FIXED2:
+RCA, STA @292
+JMP @BUG_FIXED
+JMP @LIMH_4
+FHH:
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, CLT  @4
+RCA, JLT @LIMH_4
+RCA, LDI $3
+LIMH_4:
+RCA, STA @292
+BUG_FIXED :
+JMP @LEDR4
+
+LEDR4_END:
+RCA, LDA @28
+CEQ @1
+JEQ @FHHH
+RCA, LDA @29
+RCA, CEQ @1
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, STA @30
+RCA, CLT  @10
+RCA, JLT @LIMS_4
+RCA, LDI $9
+RCA, STA @30
+JMP @LIMS_4
+FHHH:
+RCA, LDA @29
+RCA, CEQ @1
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, STA @30
+RCA, CLT  @4
+RCA, JLT @LIMS_4
+RCA, LDI $3
+RCA, STA @30
+LIMS_4:
+JEQ @LEITURA4
+RCA, STA @17
+JMP @END4
+LEITURA4:
+RUH, LDA@30
+END4:
+
+
+*
+
+
+RCZ, STA @510 	# Limpa a leitura do KEY1
+RCA, LDI $8
+RCA, STA @256    # Liga o LEDR3
+
+LEDR3 :
+RCA, LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+RCA, ANDOP @1    # Aplica mascara
+RCA, CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR3_END
+
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, CLT  @6
+JLT @LIMH_3
+RCA, LDI $5
+RCA, STA @291
+LIMH_3:
+RCA, STA @291
+JMP @LEDR3
+
+LEDR3_END:
+RCA, LDA @29
+RCA, CEQ @1
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, STA @30
+RCA, CLT  @6
+JLT @LIMS_3
+RCA, LDI $5
+RCA, STA@30
+LIMS_3:
+JEQ @LEITURA3
+RCA, STA @16
+JMP @END3
+LEITURA3 :
+RDM, LDA @30
+END3:
+
+
+
+
+*
+
+
+RCZ, STA @510 	# Limpa a leitura do KEY1
+RCA, LDI $4
+RCA, STA @256    # Liga o LEDR2
+
+LEDR2 :
+RCA, LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+RCA, ANDOP @1    # Aplica mascara
+RCA, CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR2_END
+
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, CLT  @10
+JLT @LIMH_2
+RCA, LDI $9
+RCA, STA @290
+LIMH_2:
+RCA, STA @290
+JMP @LEDR2
+
+LEDR2_END:
+RCA, LDA @29
+RCA, CEQ @1
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, STA @30
+RCA, CLT  @10
+JLT @LIMS_2
+RCA, LDI $9
+RCA, STA @30
+LIMS_2:
+JEQ @LEITURA2
+RCA, STA @15
+JMP @END2
+LEITURA2 :
+RUM, LDA @30
+END2:
+
+
+
+*
+
+
+RCZ, STA @510 	# Limpa a leitura do KEY1
+RCA, LDI $2
+RCA, STA @256    # Liga o LEDR1
+
+LEDR1 :
+RCA, LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+RCA, ANDOP @1    # Aplica mascara
+RCA, CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR1_END
+
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, CLT  @6
+JLT @LIMH_1
+RCA, LDI $5
+RCA, STA @289
+LIMH_1:
+RCA, STA @289
+JMP @LEDR1
+
+LEDR1_END:
+RCA, LDA @29
+RCA, CEQ @1
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, STA @30
+RCA, CLT  @6
+JLT @LIMS_1
+RCA, LDI $5
+RCA, STA @30
+LIMS_1:
+JEQ @LEITURA1
+RCA, STA @14
+JMP @END1
+LEITURA1:
+RDS, LDA @30
+END1:
+
+
+*
+
+RCZ, STA @510 	# Limpa a leitura do KEY1
+RCA, LDI $1
+RCA, STA @256    # Liga o LEDR0
+
+LEDR0 :
+RCA, LDA @353	#Carrega o acumulador com a leitura do botão KEY1
+RCA, ANDOP @1    # Aplica mascara
+RCA, CEQ @1      # Compara a leitura de KEY1 com a constante 1 MEM[1]
+JEQ @LEDR0_END
+
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, CLT  @10
+RCA, JLT @LIMH_0
+RCA, LDI $9
+RCA, STA @288
+LIMH_0:
+RCA, STA @288
+JMP @LEDR0
+
+LEDR0_END:
+RCA, LDA @29
+RCA, CEQ @1
+RCA, LDA @320    # Leitura SW
+RCA, ANDOP @11   # Aplica mascara SW0~SW3
+RCA, STA @30
+RCA, CLT  @10
+RCA, JLT @LIMS_0
+RCA, LDI $9
+RCA, STA @30
+LIMS_0:
+RCA, STA @13
+JEQ @LEITURA0
+JMP @END0
+LEITURA0:
+RUS, LDA @30
+END0:
+
+*
+RCA, LDA @29
+RCA, CEQ @1
+JEQ  @CHECK
+JMP @END_CHECK
+
+CHECK:
+
+RDH, CEQ @2
+RCA, LDI $2
+JEQ @END_CHECK
+
+RDH, CEQ @1
+JEQ @CHECK1
+JMP @CHECK0
+CHECK1:
+RUH, CLT @4
+JLT @CHECK1<4
+RCA, LDI $2
+JMP @END_CHECK
+CHECK1<4 :
+RCA, LDI $1
+JMP @END_CHECK
+
+CHECK0:
+RUH, CLT @4
+JLT @CHECK0<4
+RCA, LDI $1
+JMP @END_CHECK
+CHECK0<4 :
+RCA, LDI $0
+
+END_CHECK :
+RCA, STA @27
+
+
+
+
+
+RCZ, STA @288    # Limpa o HEX0
+RCZ, STA @289    # Limpa o HEX1
+RCZ, STA @289    # Limpa o HEX2
+RCZ, STA @290    # Limpa o HEX3
+RCZ, STA @291    # Limpa o HEX4
+RCZ, STA @256    # Limpa o HEX5
+RCZ, STA @510 	 # Limpa a leitura do KEY1
+RCZ, STA @509    # Limpa a leitura do KEY2
+RCZ, STA @28
+RCZ, STA @29
+
+RET

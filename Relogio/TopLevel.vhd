@@ -13,7 +13,7 @@ entity TopLevel is
 	 Sw: in std_logic_vector(9 downto 0);
 	 Fpga_reset_N: in std_logic;
 	 PC: out std_logic_vector(8 downto 0);
-	 control: out std_logic_vector(15 downto 0);
+	 instruction_out: out std_logic_vector(15 downto 0);
 	 LedR: out std_logic_vector(9 downto 0);
 	 
 	 Hex0: out std_logic_vector(6 downto 0);
@@ -161,7 +161,7 @@ LogicKeySwitch_item: entity work.LogicKeySwitch
 	
 PC <= Rom_address;
 LedR <= Leds_signal;
-control <= instruction;
+instruction_out <= instruction;
 regA <= regA_signal;
 Ram_simu <= Data_address;
 
