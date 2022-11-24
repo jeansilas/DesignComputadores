@@ -1,0 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
+
+entity subtratorCarry is
+    generic
+    (
+        larguraDados : natural := 1
+    );
+    port
+    (
+      A	      :	 in std_logic;
+      B	      :	 in std_logic;
+		SLT_b    :   in std_logic;
+		InvB     :   in std_logic;
+		carry_in :   in std_logic;
+		sel      :   in std_logic_vector(1 downto 0);
+		carry_out:   out std_logic;
+		overflow :   out std_logic;
+		output   :   out std_logic;
+    );
+end entity;
+
+architecture comportamento of subtratorCarry is
+  --constant zero : std_logic_vector(larguraDados-1 downto 0) := (others => '0');
+
+   signal soma_subtracao :   std_logic;
+   signal op_and 			 :   std_logic;
+   signal op_or 			 :   std_logic;
+	
+	signal B_signal       :   std_logic;
+
+begin
+
+	-- MUX para B e B invertido:
+
+mux_item0: entity work.muxGenerico2x1 generic map(larguraDados => 1)
+				port map (	entradaA_MUX => B , 
+								entradaB_MUX => not(B) ,
+								seletor_MUX => InvB,
+								saida_MUX => B_signal);
+
+
+      
+		
+
+end architecture;

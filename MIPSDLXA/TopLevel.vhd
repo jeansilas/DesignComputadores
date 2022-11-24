@@ -9,30 +9,13 @@ entity TopLevel is
   );
   port   (
     CLOCK_50 : in std_logic;
-    PC: out std_logic_vector((larguraDados-1) downto 0);
+  --  PC: out std_logic_vector((larguraDados-1) downto 0);  Propósito de simulação
 	 KEY : in std_logic_vector(3 downto 0);
 	 HEX0, HEX1, HEX2, HEX3, HEX4 ,HEX5: out std_logic_vector(6 downto 0);
 	 SW: std_logic_vector(9 downto 0);
 	 LEDR: out std_logic_vector(9 downto 0)
 	 
-	 -- Simulacao:
-	 
-	 
---	 funct  			: out std_logic_vector(5 downto 0);
---	 conteudo_ULA  		: out std_logic_vector(31 downto 0);
-	 
---	 end_REGS 				: out std_logic_vector(4 downto 0);
---	 end_REGT 				: out std_logic_vector(4 downto 0);
-	 
---	 end_pontos_controle : out std_logic_vector(8 downto 0);
-	 
---	 end_saida_reg_b		: out std_logic_vector(31 downto 0);
---	 end_saida_reg_a 		: out std_logic_vector(31 downto 0);
-	 
---	 end_REGD 				: out std_logic_vector(4 downto 0);
---	 saida_ram_simu	   : out std_logic_vector(31 downto 0);
---	 sel_mux 				: out std_logic
-	 
+	
   );
 end entity;
 
@@ -211,12 +194,7 @@ Shift_item1 : entity work.shifter_2
 							saida => imediato_shiftado);
 							
 
---(endereco)
-Shift_item2 : entity work.shifter_2 generic map (larguraDados => 26)
-			port map (
-							entrada => ROM_out(25 downto 0),
-							saida => endereco_shiftado);						
-							
+
 -- Soma com constante(BEQ):
 
 SomaBEQ_item: entity work.somaVar
@@ -252,7 +230,7 @@ mux_item3: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 
 mux_item4: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 				port map (	entradaA_MUX => PC_Beq_out , 
-								entradaB_MUX => somador_pc_out(31 downto 28) & endereco_shiftado & "00" ,
+								entradaB_MUX => somador_pc_out(31 downto 28) & ROM_out(25 downto 0) & "00" ,
 								seletor_MUX => mux_pc ,
 								saida_MUX => PC_in);
 -- MUX RAM:
