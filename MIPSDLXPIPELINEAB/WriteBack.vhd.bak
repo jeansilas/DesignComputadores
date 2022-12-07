@@ -1,0 +1,78 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Memory is
+  -- Total de bits das entradas e saidas
+  generic ( larguraDados : natural := 32);
+  port (
+    CLK: 		 in std_logic;
+    EX_MEM : in std_logic_vector(173 downto 0);
+    MEM_WB:  out std_logic_vector(173 downto 0)
+  );
+end entity;
+
+architecture comportamento of Memory is
+
+--SIGNALS
+
+ 
+  
+
+
+
+ 
+
+
+
+-- ALIAS
+
+
+ -- Instrucao ( unidade de controle)
+	alias instrucao: std_logic_vector(13 downto 0) is ID_EX(13 downto 0);
+	
+ -- somador_pc_out
+	alias somador_pc_out: std_logic_vector((larguraDados-1) downto 0) is ID_EX(45 downto 14);
+	
+ -- ULA_out
+	alias ULA_out: std_logic_vector((larguraDados-1) downto 0) is ID_EX(77 downto 46);
+	
+ -- RT_out
+	alias RT_out: std_logic_vector((larguraDados-1) downto 0) is ID_EX(109 downto 78);
+	
+ -- RegC_in
+	alias RegC_in: std_logic_vector((larguraDados-1) downto 0) is ID_EX(141 downto 110);
+	
+ -- LUI_out
+	alias LUI_out: std_logic_vector((larguraDados-1) downto 0) is ID_EX(173 downto 142);
+  
+ 
+ -- instrucao
+   alias WR: std_logic is instrucao(0);
+   alias RD: std_logic is instrucao(1);
+
+ 
+    
+  begin
+  
+-- Memória RAM:
+
+RAM_item: entity work.RAMMIPS generic map (dataWidth => larguraDados, addrWidth => larguraDados)
+				port map(	Endereco => ULA_out,
+								we => WR, 
+								re => RD,
+								habilita => WR,
+								clk => CLK,
+								dado_in  => RT_out,
+								dado_out =>RAM_out );
+  
+  
+							
+								
+ -- MEM/WB:
+MEM_WB: 	entity work.registradorGenerico generic map (larguraDados => 174 )
+			port map ( DIN  => LUI_out & RegC_in & RAM_out & ULA_out & somador_pc_out &instrucao, -- LUI_out(173 a 142), RegC_in(141 a 110), RAM_out(109 a 78) ,ULA_out(77 a 46), somador_pc_out(45 a 14), instrucao(13 a 0)
+						  ENABLE => '1',
+						  CLK => CLK,
+						  RST => '0');
+    
+end architecture;

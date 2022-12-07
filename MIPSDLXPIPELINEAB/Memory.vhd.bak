@@ -1,0 +1,164 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Memory is
+  -- Total de bits das entradas e saidas
+  generic ( larguraDados : natural := 32);
+  port (
+    CLK: 		 in std_logic;
+    ID_EX : in std_logic_vector(217 downto 0);
+    EX_MEM:  out std_logic_vector(32 downto 0)
+  );
+end entity;
+
+architecture comportamento of Memory is
+
+--SIGNALS
+
+ -- Saida do MUX de RT e imediato
+  signal mux_rt_ime_out: std_logic_vector((larguraDados-1) downto 0);
+ 
+ -- Saida do MUX da flag zero
+  signal  MUX_Z_out: std_logic;
+  
+ -- imediato extendido e shiftado
+  signal imediato_shiftado: std_logic_vector((larguraDados-1) downto 0);
+  
+ -- ULA
+  signal ULA_out: std_logic_vector((larguraDados-1) downto 0);
+  
+ -- Operacao da ULA
+  signal ULA_op: std_logic_vector(3 downto 0);
+ 
+ -- Flags
+  signal flag_zero: std_logic;
+  
+ -- PC + BEQ
+  signal PC_Beq_in: std_logic_vector((larguraDados-1) downto 0); -- entrada do mux do BEQ
+  signal PC_Beq_out: std_logic_vector((larguraDados-1) downto 0); -- saida do mux do BEQ
+  
+
+
+
+ 
+
+
+
+-- ALIAS
+
+
+ -- Instrucao ( unidade de controle)
+	alias instrucao: std_logic_vector(13 downto 0) is ID_EX(13 downto 0);
+	
+ -- somador_pc_out
+	alias somador_pc_out: std_logic_vector((larguraDados-1) downto 0) is ID_EX(45 downto 14);
+	
+ -- RS_out
+	alias RS_out: std_logic_vector((larguraDados-1) downto 0) is ID_EX(77 downto 46);
+	
+ -- RT_out
+	alias RT_out: std_logic_vector((larguraDados-1) downto 0) is ID_EX(109 downto 78);
+	
+ -- imediato_ext
+	alias imediato_ext: std_logic_vector((larguraDados-1) downto 0) is ID_EX(141 downto 110);
+	
+ -- RT_out
+	alias LUI_out: std_logic_vector((larguraDados-1) downto 0) is ID_EX(173 downto 142);
+	
+ -- RegC_in
+	alias RegC_in: std_logic_vector((larguraDados-1) downto 0) is ID_EX(205 downto 174);
+
+ -- Opcode
+	alias opcode: std_logic_vector(5 downto 0) is ID_EX(211 downto 206);
+ 
+ -- funct
+   alias funct: std_logic_vector(5 downto 0) is ID_EX(217 downto 212);
+	
+
+ -- instrucao
+  alias BNE: std_logic is instrucao(2);
+  alias BEQ: std_logic is instrucao(3);
+  alias tipoR: std_logic is instrucao(6);
+  alias mux_rt_imediato: std_logic is instrucao(7);
+
+  
+ 
+
+ 
+    
+  
+  
+
+  begin
+  
+
+  
+  
+-- MUX de saida dos registradores:
+
+mux_item2: entity work.muxGenerico2x1 		generic map(larguraDados => larguraDados)
+				port map (	entradaA_MUX => RT_out , 
+								entradaB_MUX => imediato_ext ,
+								seletor_MUX => mux_rt_imediato ,
+								saida_MUX => mux_rt_ime_out);
+								
+
+-- Shifta o sinal em 2 bits:
+--(imediato)
+
+Shift_item1 : entity work.shifter_2 
+			port map (
+							entrada => imediato_ext,
+							saida => imediato_shiftado);
+
+-- Soma com constante(BEQ):
+
+SomaBEQ_item: entity work.somaVar
+			 port map(	entrada => imediato_shiftado ,
+							constante => somador_pc_out ,
+							saida =>PC_Beq_in);
+							
+							
+								
+-- UCULA( Unidade de Controle da ULA):
+
+UCULA_item: entity work.ucULA
+			port map ( opcode => opcode,
+						  tipoR => tipoR,
+						  funct => funct,
+						  ULA_op => ULA_op);
+								
+
+-- port map da ULA 
+ULA_item: entity work.ULA generic map( larguraDados => larguraDados)
+			port map(	A => RS_out, 
+							B => mux_rt_ime_out,
+							Ula_op => ULA_op,
+							saida => ULA_out,
+							flagZero =>flag_zero );
+
+							
+-- MUX Z:
+mux_item7: entity work.muxGenerico2x1bit generic map(larguraDados => larguraDados)
+				port map (	entradaA_MUX => not(flag_zero) , 
+								entradaB_MUX => flag_zero ,
+								seletor_MUX => BEQ ,
+								saida_MUX => MUX_Z_out);
+
+-- MUX do BEQ:
+
+mux_item3: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
+				port map (	entradaA_MUX => somador_pc_out , 
+								entradaB_MUX => PC_Beq_in ,
+								seletor_MUX => (BEQ or BNE) and MUX_Z_out,
+								saida_MUX => PC_Beq_out);
+							
+								
+ -- EX/MEM:
+EX_MEM: 	entity work.registradorGenerico generic map (larguraDados => 206 )
+			port map ( DIN  => LUI_out & RegC_in & RT_out & ULA_out & somador_pc_out &instrucao, -- LUIout(173 a 142), RegC_in(141 a 110), RT_out(109 a 78) ,ULA_out(77 a 46), somador_pc_out(45 a 14), instrucao(13 a 0)
+						  ENABLE => '1',
+						  CLK => CLK,
+						  RST => '0');
+    
+end architecture;

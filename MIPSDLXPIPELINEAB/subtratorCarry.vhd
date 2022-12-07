@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
+
+entity subtratorCarry is
+    generic
+    (
+        larguraDados : natural := 1
+    );
+    port
+    (
+      A	      :	 in std_logic;
+      B	      :	 in std_logic;
+		carry_in :   in std_logic;
+		carry_out:   out std_logic;
+		soma   :   out std_logic
+    );
+end entity;
+
+architecture comportamento of subtratorCarry is
+
+ 
+begin
+
+	soma <= carry_in xor (A xor B) ;
+	
+	carry_out <= (A and B) or ( carry_in and (A xor B)) ;
+
+      
+		
+
+end architecture;
